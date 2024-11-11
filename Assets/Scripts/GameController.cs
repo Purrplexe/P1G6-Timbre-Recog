@@ -5,6 +5,7 @@ using UnityEngine;
 public class GameController : MonoBehaviour
 {
     public Instrument[] instruments;
+    private AudioSource m_AudioSource;
     private string[] melodies = {
         "Down",
         "EineKliene",
@@ -15,6 +16,11 @@ public class GameController : MonoBehaviour
         "Sonata No 16",
         "Up"
     };
+    public void playAudio(int melodyID, Instrument instrument)
+    {
+        m_AudioSource.clip = instrument.audioClips[melodyID];
+        m_AudioSource.Play();
+    }
     // Start is called before the first frame update
     void Start()
     {
@@ -25,5 +31,9 @@ public class GameController : MonoBehaviour
     void Update()
     {
         
+    }
+    private void Awake()
+    {
+        m_AudioSource = GetComponent<AudioSource>();
     }
 }
