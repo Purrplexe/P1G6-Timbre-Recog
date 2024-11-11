@@ -6,6 +6,8 @@ public class GameController : MonoBehaviour
 {
     public Instrument[] instruments;
     private AudioSource m_AudioSource;
+    private int current_melody = 0;
+    private Instrument[] currentIntruments;
     private string[] melodies = {
         "Down",
         "EineKliene",
@@ -21,16 +23,14 @@ public class GameController : MonoBehaviour
         m_AudioSource.clip = instrument.audioClips[melodyID];
         m_AudioSource.Play();
     }
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
 
-    // Update is called once per frame
-    void Update()
+    public void ButtonHovered()
     {
-        
+        // play audio on delay 
+    }
+    private void Start()
+    {
+        //setup buttons with sounds and etc
     }
     private void Awake()
     {
