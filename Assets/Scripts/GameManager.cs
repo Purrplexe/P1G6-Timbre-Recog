@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 
 public class GameManager : MonoBehaviour
@@ -15,6 +16,9 @@ public class GameManager : MonoBehaviour
     public GameObject Info3;
     public GameObject button1;
     public GameObject button2;
+
+    public GameObject cameraMain;
+    public GameObject cameraGuitar;
     // Hardcoded variables you may want to tune.
     //private float startingTime = 30f;
 
@@ -42,7 +46,8 @@ public class GameManager : MonoBehaviour
         Info3.SetActive(false);
         button1.SetActive(true);
         button2.SetActive(false);
-
+        cameraMain.SetActive(true);
+        cameraGuitar.SetActive(false);
 
 
     }
@@ -54,5 +59,10 @@ public class GameManager : MonoBehaviour
         Info3.SetActive(true);
         button1.SetActive(false);
         button2.SetActive(true);
+    }
+    public void MainToGuitar()
+    {
+        cameraMain.SetActive(false);
+        cameraGuitar.SetActive(true);
     }
 }
