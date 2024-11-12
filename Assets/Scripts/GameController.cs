@@ -1,12 +1,15 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Runtime.CompilerServices;
 using UnityEngine;
+using UnityEngine.InputSystem;
 
 public class GameController : MonoBehaviour
 {
     public Instrument[] instruments;
     private AudioSource m_AudioSource;
     private int current_melody = 0;
+    public GameObject[] selectableIntruments;
     private Instrument[] currentIntruments;
     private string[] melodies = {
         "Down",
@@ -35,5 +38,10 @@ public class GameController : MonoBehaviour
     private void Awake()
     {
         m_AudioSource = GetComponent<AudioSource>();
+    }
+
+    public void InstrumentSelected(int id)
+    {
+        playAudio(current_melody, instruments[id]);
     }
 }
