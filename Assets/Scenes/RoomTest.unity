@@ -556,13 +556,13 @@ MonoBehaviour:
     m_PressedTrigger: Pressed
     m_SelectedTrigger: Selected
     m_DisabledTrigger: Disabled
-  m_Interactable: 1
+  m_Interactable: 0
   m_TargetGraphic: {fileID: 522619688}
   m_FillRect: {fileID: 106867386}
   m_HandleRect: {fileID: 522619687}
   m_Direction: 0
   m_MinValue: 0
-  m_MaxValue: 1
+  m_MaxValue: 55
   m_WholeNumbers: 0
   m_Value: 0
   m_OnValueChanged:
@@ -577,9 +577,34 @@ MonoBehaviour:
   m_GameObject: {fileID: 811467639}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1b5306cfef89e97499369b46589bf772, type: 3}
+  m_Script: {fileID: 11500000, guid: 07c283af1dc07244495f4c370fec5a89, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  curve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 2
+      outSlope: 2
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    - serializedVersion: 3
+      time: 1
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  maxtime: 0
 --- !u!1 &1074185426
 GameObject:
   m_ObjectHideFlags: 0
