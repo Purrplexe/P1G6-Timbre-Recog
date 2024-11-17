@@ -15,7 +15,7 @@ public class GameManager : MonoBehaviour
     public GameObject Info2;
     public GameObject Info3;
     public GameObject button1;
-    public GameObject button2;
+    //public GameObject button2;
 
     public GameObject cameraMain;
     public GameObject cameraGuitar;
@@ -45,7 +45,7 @@ public class GameManager : MonoBehaviour
         Info2.SetActive(false);
         Info3.SetActive(false);
         button1.SetActive(true);
-        button2.SetActive(false);
+        //button2.SetActive(false);
         cameraMain.SetActive(true);
         cameraGuitar.SetActive(false);
 
@@ -58,11 +58,11 @@ public class GameManager : MonoBehaviour
         Info2.SetActive(true);
         Info3.SetActive(true);
         button1.SetActive(false);
-        button2.SetActive(true);
+        //button2.SetActive(true);
     }
     public void MainToGuitar()
     {
-        cameraMain.SetActive(false);
+        //cameraMain.SetActive(false);
         cameraGuitar.SetActive(true);
     }
 }
