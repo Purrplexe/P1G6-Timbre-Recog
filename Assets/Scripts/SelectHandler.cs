@@ -3,13 +3,13 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.EventSystems;
 
-public class SelectHandler : MonoBehaviour, ISelectHandler
+public class SelectHandler : MonoBehaviour
 {
     public GameController controller;
     public int buttonID;
-     public void OnSelect(BaseEventData eventData)
+     public void OnClick()
     {
-        controller.InstrumentSelected(buttonID);
+        controller.ButtonClicked(buttonID);
     }
 
 }

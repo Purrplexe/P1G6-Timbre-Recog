@@ -50,4 +50,14 @@ public class GameController : MonoBehaviour
     {
         playAudio(current_melody, instruments[currentInstrument]);
     }
+    public void ButtonClicked(int id)
+    {
+        if (currentInstruments[id] == currentInstrument)
+        {
+            // user selected correctly
+        } else
+        {
+            // user selected incorrectly
+        }
+    }
 }
