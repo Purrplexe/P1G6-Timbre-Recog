@@ -11,7 +11,7 @@ public class GameController : MonoBehaviour
     private int currentInstrument;
     private int current_melody = 0;
     public GameObject[] selectableIntruments;
-    private Instrument[] currentInstruments;
+    private int[] currentInstruments;
     private string[] melodies = {
         "Down",
         "EineKliene",
@@ -29,7 +29,12 @@ public class GameController : MonoBehaviour
     }
     private void Start()
     {
-        //setup buttons with sounds and etc
+        // should be the actual instrument
+        currentInstrument = 0;
+        // randomly selected?
+        current_melody = 0;
+        // set what instruments are used by index
+        currentInstruments = new int[]{0,1,2,3};
     }
     private void Awake()
     {
@@ -43,6 +48,6 @@ public class GameController : MonoBehaviour
 
     public void Replay()
     {
-        playAudio(current_melody, instruments[currentInstrument])
+        playAudio(current_melody, instruments[currentInstrument]);
     }
 }
