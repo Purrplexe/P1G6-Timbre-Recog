@@ -27,11 +27,6 @@ public class GameController : MonoBehaviour
         m_AudioSource.clip = instrument.audioClips[melodyID];
         m_AudioSource.Play();
     }
-
-    public void ButtonHovered()
-    {
-        // play audio on delay 
-    }
     private void Start()
     {
         //setup buttons with sounds and etc
