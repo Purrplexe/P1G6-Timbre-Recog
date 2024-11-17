@@ -351,6 +351,17 @@ Transform:
   m_Children:
   - {fileID: 551626739}
   - {fileID: 1256012203}
+  - {fileID: 1653553356}
+  - {fileID: 421609096}
+  - {fileID: 1229563196}
+  - {fileID: 1059915339}
+  - {fileID: 1532231721}
+  - {fileID: 506053168}
+  - {fileID: 1872967219}
+  - {fileID: 773410969}
+  - {fileID: 1278288188}
+  - {fileID: 321673964}
+  - {fileID: 561778930}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &200277190
@@ -635,6 +646,60 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 298588356}
   m_CullTransparentMesh: 1
+--- !u!1 &321673963
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 321673964}
+  - component: {fileID: 321673965}
+  m_Layer: 0
+  m_Name: Violin
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &321673964
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 321673963}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0.58818054, y: 0, z: 0.020301819}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 45228028}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &321673965
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 321673963}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b07f8924d593e464998068207b541242, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  audioClips:
+  - {fileID: 8300000, guid: 4c090a9790d88bb479eea25e5439839b, type: 3}
+  - {fileID: 8300000, guid: ba8d433d5cfc6d44bbc1befe6f93dafe, type: 3}
+  - {fileID: 8300000, guid: 4e891ae1582e86742abae86ad98fa4a8, type: 3}
+  - {fileID: 8300000, guid: 19932c061d5bba347b15236c1e6b131b, type: 3}
+  - {fileID: 8300000, guid: 71ac985d05640d445a488338c61a973c, type: 3}
+  - {fileID: 8300000, guid: 2814982bfd5774c438f9d5463893b5d1, type: 3}
+  - {fileID: 8300000, guid: 005fccf464c9d61428a12dd5027de552, type: 3}
+  - {fileID: 8300000, guid: dac25cacf6682ce42acf0e2b3f5e2254, type: 3}
+  instrumentName: Violin
 --- !u!1 &371155950
 GameObject:
   m_ObjectHideFlags: 0
@@ -783,6 +848,60 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   controller: {fileID: 552425369}
   buttonID: 0
+--- !u!1 &421609095
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 421609096}
+  - component: {fileID: 421609097}
+  m_Layer: 0
+  m_Name: Drum
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &421609096
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 421609095}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0.58818054, y: 0, z: 0.020301819}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 45228028}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &421609097
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 421609095}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b07f8924d593e464998068207b541242, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  audioClips:
+  - {fileID: 8300000, guid: edd12db17b93fb94c9e314356ba6649f, type: 3}
+  - {fileID: 8300000, guid: 28357e2cda517d04a9f3981cc06984e2, type: 3}
+  - {fileID: 8300000, guid: 8b54016dc014ee447adfd0dc499a8f89, type: 3}
+  - {fileID: 8300000, guid: 51c2e573c148d894da4f9ed4f8ac746c, type: 3}
+  - {fileID: 8300000, guid: 5123e1170fd4c4549bae8860786e3537, type: 3}
+  - {fileID: 8300000, guid: cd5ff0f0f0bb4154aa067ec690cc5602, type: 3}
+  - {fileID: 8300000, guid: fc48a9c61cbcef846a79cd3139a75b1c, type: 3}
+  - {fileID: 8300000, guid: 52dff771d67f63147b981d98b793db80, type: 3}
+  instrumentName: Drum
 --- !u!1 &430661125
 GameObject:
   m_ObjectHideFlags: 0
@@ -917,6 +1036,60 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 430661125}
   m_CullTransparentMesh: 1
+--- !u!1 &506053167
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 506053168}
+  - component: {fileID: 506053169}
+  m_Layer: 0
+  m_Name: Sax
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &506053168
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 506053167}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0.58818054, y: 0, z: 0.020301819}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 45228028}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &506053169
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 506053167}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b07f8924d593e464998068207b541242, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  audioClips:
+  - {fileID: 8300000, guid: cedd31dfb4d6f8e44881401f39157acd, type: 3}
+  - {fileID: 8300000, guid: 50c113d0b42596c4cab97c8d8704bea9, type: 3}
+  - {fileID: 8300000, guid: 0d71028fd0ab28040ae72fb396b22283, type: 3}
+  - {fileID: 8300000, guid: 9a59d5dcab13392489799b0b680680ee, type: 3}
+  - {fileID: 8300000, guid: ee99cb5eaaf651d418e90c9d0b714693, type: 3}
+  - {fileID: 8300000, guid: bffeb7e6fe4be3f429d4529ecd881c96, type: 3}
+  - {fileID: 8300000, guid: 998f7e0f54d96524193b9e4fe57b2d0d, type: 3}
+  - {fileID: 8300000, guid: 1257a5f795e9eee40814307070f78a2f, type: 3}
+  instrumentName: Sax
 --- !u!1 &551626738
 GameObject:
   m_ObjectHideFlags: 0
@@ -970,7 +1143,7 @@ MonoBehaviour:
   - {fileID: 8300000, guid: 876194b7d7de7ed47a590d947f40f977, type: 3}
   - {fileID: 8300000, guid: 3352c0cb5ea542b498364c743ca5af26, type: 3}
   - {fileID: 8300000, guid: 7368d530df723be4d94e9995fd1930da, type: 3}
-  instrumentName: Cello
+  instrumentName: Bass
 --- !u!1 &552425368
 GameObject:
   m_ObjectHideFlags: 0
@@ -1147,6 +1320,60 @@ MonoBehaviour:
   m_DefaultActionMap: Player
   m_SplitScreenIndex: -1
   m_Camera: {fileID: 0}
+--- !u!1 &561778929
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 561778930}
+  - component: {fileID: 561778931}
+  m_Layer: 0
+  m_Name: Xylophone
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &561778930
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 561778929}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0.58818054, y: 0, z: 0.020301819}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 45228028}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &561778931
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 561778929}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b07f8924d593e464998068207b541242, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  audioClips:
+  - {fileID: 8300000, guid: d22f569c9860b73448a0150a5fa1cc0c, type: 3}
+  - {fileID: 8300000, guid: 7da02ae4cea150d45937839dee9be26f, type: 3}
+  - {fileID: 8300000, guid: abc1de5aad5f43f4eaaa06dd8cd83f2d, type: 3}
+  - {fileID: 8300000, guid: 9ac85a58f61f9e646a2c7f87eae5d6be, type: 3}
+  - {fileID: 8300000, guid: 970f743ceeb199c43ab9b8f8c3c880c5, type: 3}
+  - {fileID: 8300000, guid: 96a74aaa5001d914b92fd15603fa884e, type: 3}
+  - {fileID: 8300000, guid: 84f62d4042e94f14c925385404bd6a9a, type: 3}
+  - {fileID: 8300000, guid: 30269a103e729cc47b02d4ef0d92c542, type: 3}
+  instrumentName: Xylophone
 --- !u!1 &768016356
 GameObject:
   m_ObjectHideFlags: 0
@@ -1282,6 +1509,114 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 768016356}
   m_CullTransparentMesh: 1
+--- !u!1 &773410968
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 773410969}
+  - component: {fileID: 773410970}
+  m_Layer: 0
+  m_Name: Trumpet
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &773410969
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 773410968}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0.58818054, y: 0, z: 0.020301819}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 45228028}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &773410970
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 773410968}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b07f8924d593e464998068207b541242, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  audioClips:
+  - {fileID: 8300000, guid: dbe6f723e6c53224fa7acb8e09043ade, type: 3}
+  - {fileID: 8300000, guid: 035263f1506e67b48967506698977020, type: 3}
+  - {fileID: 8300000, guid: 4c97ea42660d728479737ea3ae07608f, type: 3}
+  - {fileID: 8300000, guid: 00e2dcfd69e21a246a0b9c31ed1a5314, type: 3}
+  - {fileID: 8300000, guid: 3cff80a09bbf7a9499b25fc43874d388, type: 3}
+  - {fileID: 8300000, guid: 36cf3b19db61c8f478c4f8beeacbf50d, type: 3}
+  - {fileID: 8300000, guid: 7dbef135373ee3a4098364f7a1e06c0c, type: 3}
+  - {fileID: 8300000, guid: 77e04d127b5225b4bbe29b28c5e43f49, type: 3}
+  instrumentName: Trumpet
+--- !u!1 &1059915338
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1059915339}
+  - component: {fileID: 1059915340}
+  m_Layer: 0
+  m_Name: Guitar
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1059915339
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1059915338}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0.58818054, y: 0, z: 0.020301819}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 45228028}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1059915340
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1059915338}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b07f8924d593e464998068207b541242, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  audioClips:
+  - {fileID: 8300000, guid: a237734ead84e974c852c217d6a3d360, type: 3}
+  - {fileID: 8300000, guid: 98a688ecd4631da4295dd4a01290876e, type: 3}
+  - {fileID: 8300000, guid: ee1ac4f71d06ece489cdb7697282b58d, type: 3}
+  - {fileID: 8300000, guid: c8d2dde0dc7f4294499050c63499e086, type: 3}
+  - {fileID: 8300000, guid: 0bd5b857c0f26894fa5b8de698a512b4, type: 3}
+  - {fileID: 8300000, guid: 39f37681f57111148ad6cf3397601a3e, type: 3}
+  - {fileID: 8300000, guid: 9ec130bf9285eec41ae3a2fac53aebd3, type: 3}
+  - {fileID: 8300000, guid: d20ee1e5a7afd744aa24b818606ee425, type: 3}
+  instrumentName: Guitar
 --- !u!1 &1190560084
 GameObject:
   m_ObjectHideFlags: 0
@@ -1416,6 +1751,60 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1190560084}
   m_CullTransparentMesh: 1
+--- !u!1 &1229563195
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1229563196}
+  - component: {fileID: 1229563197}
+  m_Layer: 0
+  m_Name: Flute
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1229563196
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1229563195}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0.58818054, y: 0, z: 0.020301819}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 45228028}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1229563197
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1229563195}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b07f8924d593e464998068207b541242, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  audioClips:
+  - {fileID: 8300000, guid: 6fdc8bd3e0e5a3a4d8191fe2687e6367, type: 3}
+  - {fileID: 8300000, guid: 82f00823d1d6f6d46b2b0946b9e2fd2c, type: 3}
+  - {fileID: 8300000, guid: 31034b998af689c4a96f44327d94e03a, type: 3}
+  - {fileID: 8300000, guid: 1c3aadba23a095c41a8b89ba32dc8c43, type: 3}
+  - {fileID: 8300000, guid: 004257bd1f4163b4c97dd92025da31b6, type: 3}
+  - {fileID: 8300000, guid: 433023fa58aba744d96ffda94723733f, type: 3}
+  - {fileID: 8300000, guid: 4cf3bd42184b59347a73b0bf9e6c4961, type: 3}
+  - {fileID: 8300000, guid: 433023fa58aba744d96ffda94723733f, type: 3}
+  instrumentName: Flute
 --- !u!1 &1256012202
 GameObject:
   m_ObjectHideFlags: 0
@@ -1470,6 +1859,60 @@ MonoBehaviour:
   - {fileID: 8300000, guid: 5f09e8df90e77e84eb0f0f31ed3acd47, type: 3}
   - {fileID: 8300000, guid: 795ed3030e140e14886b304368b6239f, type: 3}
   instrumentName: Cello
+--- !u!1 &1278288187
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1278288188}
+  - component: {fileID: 1278288189}
+  m_Layer: 0
+  m_Name: Viola
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1278288188
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1278288187}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0.58818054, y: 0, z: 0.020301819}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 45228028}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1278288189
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1278288187}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b07f8924d593e464998068207b541242, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  audioClips:
+  - {fileID: 8300000, guid: 38d64d35ee703f74ca892df363fff947, type: 3}
+  - {fileID: 8300000, guid: 803439cea7ad8b742a315dba822bf455, type: 3}
+  - {fileID: 8300000, guid: 5af2f5d772bbf9144be7586e6bb68e1c, type: 3}
+  - {fileID: 8300000, guid: ee43aff999d5b194cab6794c5c6ede40, type: 3}
+  - {fileID: 8300000, guid: de2ded61a24c7314d857e94b6a5cc07d, type: 3}
+  - {fileID: 8300000, guid: 3378e2c3f836b5e4a80acc4f4f10e23e, type: 3}
+  - {fileID: 8300000, guid: 66b323b5ed3a4db42bfd13c0816ad952, type: 3}
+  - {fileID: 8300000, guid: 6a02714df58fd3c4fbb11858b82363f3, type: 3}
+  instrumentName: Viola
 --- !u!1 &1404579275
 GameObject:
   m_ObjectHideFlags: 0
@@ -1604,6 +2047,60 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1404579275}
   m_CullTransparentMesh: 1
+--- !u!1 &1532231720
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1532231721}
+  - component: {fileID: 1532231722}
+  m_Layer: 0
+  m_Name: Piano
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1532231721
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1532231720}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0.58818054, y: 0, z: 0.020301819}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 45228028}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1532231722
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1532231720}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b07f8924d593e464998068207b541242, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  audioClips:
+  - {fileID: 8300000, guid: d8c4f114831130d45b42e6b86d3dc299, type: 3}
+  - {fileID: 8300000, guid: 15b594af25103df4e9c2e21930c58652, type: 3}
+  - {fileID: 8300000, guid: 2e8bb2ffd2874b14eb73f13badb29732, type: 3}
+  - {fileID: 8300000, guid: 93556c262bf17274f8878de4bde973e2, type: 3}
+  - {fileID: 8300000, guid: 6e6a901c80c4e914cbd5f2e6051e2a75, type: 3}
+  - {fileID: 8300000, guid: b958a3ec556dfb54c9ec715d3ed55270, type: 3}
+  - {fileID: 8300000, guid: d795e2f679a337a469282f489c49d0c7, type: 3}
+  - {fileID: 8300000, guid: 800facd668ebc4d45ade9a4521b36f0c, type: 3}
+  instrumentName: Piano
 --- !u!1 &1552203377
 GameObject:
   m_ObjectHideFlags: 0
@@ -1738,6 +2235,60 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1552203377}
   m_CullTransparentMesh: 1
+--- !u!1 &1653553355
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1653553356}
+  - component: {fileID: 1653553357}
+  m_Layer: 0
+  m_Name: Clarinet
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1653553356
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1653553355}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0.58818054, y: 0, z: 0.020301819}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 45228028}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1653553357
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1653553355}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b07f8924d593e464998068207b541242, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  audioClips:
+  - {fileID: 8300000, guid: 2fc3d3068a85e024986449be91b8a997, type: 3}
+  - {fileID: 8300000, guid: 985744a6b0c31624bba3ea0f8fcff0a0, type: 3}
+  - {fileID: 8300000, guid: 834a5465e47a0ec4f8b21e98831d86a8, type: 3}
+  - {fileID: 8300000, guid: cde5ceeec97945b48a5591493746c337, type: 3}
+  - {fileID: 8300000, guid: f5c17202f30e7cb45884cce9485924c0, type: 3}
+  - {fileID: 8300000, guid: 39a007a82d64d7c4a8db7a9be712b726, type: 3}
+  - {fileID: 8300000, guid: 2a01c9f6c55ace44fa756479ffd0762d, type: 3}
+  - {fileID: 8300000, guid: e17870d9c38056c44a24cb0dd6d2ff8c, type: 3}
+  instrumentName: Clarinet
 --- !u!1 &1665321433
 GameObject:
   m_ObjectHideFlags: 0
@@ -2034,6 +2585,60 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1825718504}
   m_CullTransparentMesh: 1
+--- !u!1 &1872967218
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1872967219}
+  - component: {fileID: 1872967220}
+  m_Layer: 0
+  m_Name: Trombone
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1872967219
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1872967218}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0.58818054, y: 0, z: 0.020301819}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 45228028}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1872967220
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1872967218}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b07f8924d593e464998068207b541242, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  audioClips:
+  - {fileID: 8300000, guid: 19e8ef6f4114c04468c88465e62b20ea, type: 3}
+  - {fileID: 8300000, guid: 0c90fb60aefc87449a09c88b5fcc5692, type: 3}
+  - {fileID: 8300000, guid: 052637992c9094641b40cf43e9711024, type: 3}
+  - {fileID: 8300000, guid: 0aa9c51439a211b4aa1209e66722f77f, type: 3}
+  - {fileID: 8300000, guid: dde479f8826076343b6ee1a148734364, type: 3}
+  - {fileID: 8300000, guid: d0a9991c7352b8746aff00ca28c532d9, type: 3}
+  - {fileID: 8300000, guid: f17b0bab1a44796418756f2b6f94baab, type: 3}
+  - {fileID: 8300000, guid: 0c7e94f070df91e41a16338fde1c18ab, type: 3}
+  instrumentName: Trombone
 --- !u!1 &2045280022
 GameObject:
   m_ObjectHideFlags: 0
