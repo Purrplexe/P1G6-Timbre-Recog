@@ -8,9 +8,10 @@ public class GameController : MonoBehaviour
 {
     public Instrument[] instruments;
     private AudioSource m_AudioSource;
+    private int currentInstrument;
     private int current_melody = 0;
     public GameObject[] selectableIntruments;
-    private Instrument[] currentIntruments;
+    private Instrument[] currentInstruments;
     private string[] melodies = {
         "Down",
         "EineKliene",
@@ -43,5 +44,10 @@ public class GameController : MonoBehaviour
     public void InstrumentSelected(int id)
     {
         playAudio(current_melody, instruments[id]);
+    }
+
+    public void Replay()
+    {
+        playAudio(current_melody, instruments[currentInstrument])
     }
 }
