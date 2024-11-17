@@ -10,7 +10,6 @@ public class GameController : MonoBehaviour
     private AudioSource m_AudioSource;
     private int currentInstrument;
     private int current_melody = 0;
-    public GameObject[] selectableIntruments;
     private int[] currentInstruments;
     private string[] melodies = {
         "Down",

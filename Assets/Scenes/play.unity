@@ -1178,7 +1178,17 @@ MonoBehaviour:
   instruments:
   - {fileID: 551626740}
   - {fileID: 1256012204}
-  selectableIntruments: []
+  - {fileID: 1653553357}
+  - {fileID: 421609097}
+  - {fileID: 1229563197}
+  - {fileID: 1059915340}
+  - {fileID: 1532231722}
+  - {fileID: 506053169}
+  - {fileID: 1872967220}
+  - {fileID: 773410970}
+  - {fileID: 1278288189}
+  - {fileID: 321673965}
+  - {fileID: 561778931}
 --- !u!4 &552425370
 Transform:
   m_ObjectHideFlags: 0
