@@ -22,9 +22,9 @@ public class GameController : MonoBehaviour
         "Sonata No 16",
         "Up"
     };
-    public void playAudio(int melodyID, Instrument instrument)
+    public void playAudio(Instrument instrument)
     {
-        m_AudioSource.clip = instrument.audioClips[melodyID];
+        m_AudioSource.clip = instrument.audioClips[current_melody];
         m_AudioSource.Play();
     }
     private void Start()
@@ -43,21 +43,17 @@ public class GameController : MonoBehaviour
 
     public void InstrumentSelected(int id)
     {
-        playAudio(current_melody, instruments[id]);
+        playAudio(instruments[id]);
     }
 
     public void Replay()
     {
-        playAudio(current_melody, instruments[currentInstrument]);
+        playAudio(instruments[currentInstrument]);
     }
     public void ButtonClicked(int id)
     {
-        if (currentInstruments[id] == currentInstrument)
-        {
-            // user selected correctly
-        } else
-        {
-            // user selected incorrectly
-        }
+        // play corresponding instrument
+        playAudio(instruments[currentInstruments[id]]);
+        // open prompt to confirm choice?
     }
 }
