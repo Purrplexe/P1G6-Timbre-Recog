@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.EventSystems;
 
-public class SelectHandler : MonoBehaviour
+public class SelectHandler : MonoBehaviour, ISelectHandler
 {
     public GameController controller;
     public int buttonID;
@@ -12,4 +12,8 @@ public class SelectHandler : MonoBehaviour
         controller.ButtonClicked(buttonID);
     }
 
+    void ISelectHandler.OnSelect(BaseEventData eventData)
+    {
+        // on hover
+    }
 }
