@@ -1,6 +1,7 @@
 using JetBrains.Annotations;
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using System.Runtime.CompilerServices;
 using UnityEditor.Experimental.GraphView;
 using UnityEngine;
@@ -35,11 +36,30 @@ public class GameController : MonoBehaviour
     private void Start()
     {
         // should be the actual instrument
-        correctInstrument = 0;
-        // randomly selected?
-        current_melody = 0;
-        // set what instruments are used by index
-        currentInstruments = new int[]{0,1,2,3};
+        correctInstrument = Random.Range(0, instruments.Length);
+        // set the current instruments such that it contains the correct instrument and 3 other random ones that are unique
+        currentInstruments = new int[] { -1, -1, -1, -1 };
+        int correctIndex = Random.Range(0, 3);
+        for (int i = 0; i < 4; i++)
+        {
+            if (i == correctIndex)
+            {
+                currentInstruments[i] = correctInstrument;
+            }
+            else
+            {
+                int randominstrument = Random.Range(0, instruments.Length);
+                // check that the selected instrument is not the correct instrument or a duplicate
+                while (randominstrument == correctInstrument || currentInstruments.ToList().FindAll(i => i == randominstrument).Count != 0)
+                {
+                    randominstrument = Random.Range(0, instruments.Length);
+                }
+                currentInstruments[i] = Random.Range(0, instruments.Length);
+            }
+            
+        }
+        
+        current_melody = Random.Range(0,melodies.Length);
     }
     private void Awake()
     {
