@@ -49,7 +49,7 @@ public class GameController : MonoBehaviour
             else
             {
                 int randominstrument = Random.Range(0, instruments.Length);
-                // check that the selected instrument is not the correct instrument or a duplicate
+                // check that the selected instrument is not the correct instrument or a duplicate (by checking if the array contain)
                 while (randominstrument == correctInstrument || currentInstruments.ToList().FindAll(i => i == randominstrument).Count != 0)
                 {
                     randominstrument = Random.Range(0, instruments.Length);
