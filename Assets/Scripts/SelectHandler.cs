@@ -14,6 +14,6 @@ public class SelectHandler : MonoBehaviour, ISelectHandler
 
     void ISelectHandler.OnSelect(BaseEventData eventData)
     {
-        // on hover
+        
     }
 }
