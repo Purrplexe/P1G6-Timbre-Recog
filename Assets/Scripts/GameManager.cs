@@ -26,6 +26,7 @@ public class GameManager : MonoBehaviour
     public GameObject cameraGuitar;
     public GameObject cameraGuitarGame;
     public bool transitioned = false;
+    public float timerForTransition;
     // Hardcoded variables you may want to tune.
     //private float startingTime = 30f;
 
@@ -117,7 +118,7 @@ public class GameManager : MonoBehaviour
     {
         transitionScreen.SetActive(true);
         //transitioned = true;
-        yield return new WaitForSeconds(0.5f);
+        yield return new WaitForSeconds(timerForTransition);
         transitionScreen.SetActive(false);
         
     }
