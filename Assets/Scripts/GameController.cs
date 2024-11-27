@@ -18,6 +18,7 @@ public class GameController : MonoBehaviour
     private int current_melody = 0;
     private int[] currentInstruments;
     public Button replayButton;
+    public int correctIndex = -1;
     private string[] melodies = {
         "Down",
         "EineKliene",
@@ -33,13 +34,23 @@ public class GameController : MonoBehaviour
         m_AudioSource.clip = instrument.audioClips[current_melody];
         m_AudioSource.Play();
     }
+
+    private void SetCorrectInstrument(int newValue)
+    {
+        correctInstrument = newValue;
+        currentInstruments[correctIndex] = correctInstrument;
+    }
     private void Start()
     {
         // should be the actual instrument
         correctInstrument = Random.Range(0, instruments.Length);
         // set the current instruments such that it contains the correct instrument and 3 other random ones that are unique
         currentInstruments = new int[] { -1, -1, -1, -1 };
-        int correctIndex = Random.Range(0, 3);
+        if (correctIndex < 0)
+        {
+            correctIndex = Random.Range(0, 3);
+        }
+        
         for (int i = 0; i < 4; i++)
         {
             if (i == correctIndex)
