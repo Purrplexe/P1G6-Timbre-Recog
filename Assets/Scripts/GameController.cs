@@ -54,7 +54,7 @@ public class GameController : MonoBehaviour
                 {
                     randominstrument = Random.Range(0, instruments.Length);
                 }
-                currentInstruments[i] = Random.Range(0, instruments.Length);
+                currentInstruments[i] = randominstrument;
             }
             
         }
@@ -82,7 +82,7 @@ public class GameController : MonoBehaviour
                 {
                     randominstrument = Random.Range(0, instruments.Length);
                 }
-                currentInstruments[i] = Random.Range(0, instruments.Length);
+                currentInstruments[i] = randominstrument;
             }
 
         }
