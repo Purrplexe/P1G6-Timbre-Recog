@@ -12,7 +12,6 @@ public class GameManager : MonoBehaviour
     // [SerializeField] private TMPro.TextMeshProUGUI timeText;
     // [SerializeField] private TMPro.TextMeshProUGUI scoreText;
     public GameObject background;
-    public GameObject transitionScreen;
     public GameObject Info1;
     public GameObject Info2;
     public GameObject Info3;
@@ -27,7 +26,7 @@ public class GameManager : MonoBehaviour
     
     public GameObject[] turnOffs;
     public GameObject currentObject;
-
+    private Dictionary<string, int> instrumentToID = new Dictionary<string, int>();
 
 
     public GameObject gameUI;
@@ -69,11 +68,6 @@ public class GameManager : MonoBehaviour
     public GameObject cameraXylophone;
     public GameObject cameraXylophoneGame;
 
-    [Header("Congo Drum")]
-    public GameObject buttonCongo;
-    [Header("Congo Cams")]
-    public GameObject cameraCongo;
-    public GameObject cameraCongoGame;
     // Hardcoded variables you may want to tune.
     //private float startingTime = 30f;
 
@@ -95,9 +89,9 @@ public class GameManager : MonoBehaviour
     public void Awake()
     {
         // Hide/show the UI elements we don't/do want to see.
-        
+
+        bindInstruments();
         background.SetActive(true);
-        transitionScreen.SetActive(false);
         Info1.SetActive(true);
         Info2.SetActive(false);
         Info3.SetActive(false);
@@ -119,10 +113,6 @@ public class GameManager : MonoBehaviour
         cameraDrums.SetActive(false);
         cameraDrumsGame.SetActive(false);
 
-        buttonCongo.SetActive(false);
-        cameraCongo.SetActive(false);
-        cameraCongoGame.SetActive(false);
-
         buttonTrombone.SetActive(false);
         cameraTrombone.SetActive(false);
         cameraTromboneGame.SetActive(false);
@@ -142,7 +132,13 @@ public class GameManager : MonoBehaviour
         
 
     }
-    
+    public void bindInstruments()
+    {
+        for (int i = 0; i < gameController.instruments.Length; i++)
+        {
+            instrumentToID.Add(gameController.instruments[i].name, i);
+        }
+    }
     public void Canner()
     {
         background.SetActive(false);
@@ -162,12 +158,12 @@ public class GameManager : MonoBehaviour
     }
     public void PlayGuitar()
     {
+        gameController.setCorrectInstrument(instrumentToID["Guitar"]);
         buttonGuitar.SetActive(false);
         cameraGuitar.SetActive(false);
         Info2.SetActive(false);
         Info3.SetActive(false);
         //transitionScreen.SetActive(true);
-        StartCoroutine (TransitionScreen());
        
         
         cameraGuitarGame.SetActive(true);
@@ -189,12 +185,13 @@ public class GameManager : MonoBehaviour
     }
     public void PlayPiano()
     {
+        gameController.setCorrectInstrument(instrumentToID["Piano"]);
+        gameController.SelectReplay();
         buttonPiano.SetActive(false);
         cameraPiano.SetActive(false);
         Info2.SetActive(false);
         Info3.SetActive(false);
         //transitionScreen.SetActive(true);
-        StartCoroutine(TransitionScreen());
 
 
         cameraPianoGame.SetActive(true);
@@ -211,22 +208,7 @@ public class GameManager : MonoBehaviour
         buttonReturn.SetActive(true);
 
     }
-    public void PlayCello()
-    {
-        buttonCello.SetActive(false);
-        cameraCello.SetActive(false);
-        Info2.SetActive(false);
-        Info3.SetActive(false);
-        //transitionScreen.SetActive(true);
-        StartCoroutine(TransitionScreen());
 
-
-        cameraCelloGame.SetActive(true);
-        gameUI.SetActive(true);
-        buttonReturn.SetActive(true);
-        //transitioned = false;
-        //transitionScreen.SetActive(false); 
-    }
     public void MainToDrumsSelect()
     {
         //cameraMain.SetActive(false);
@@ -237,12 +219,13 @@ public class GameManager : MonoBehaviour
     }
     public void PlayDrums()
     {
+        gameController.setCorrectInstrument(instrumentToID["Drum"]);
+        gameController.SelectReplay();
         buttonDrums.SetActive(false);
         cameraDrums.SetActive(false);
         Info2.SetActive(false);
         Info3.SetActive(false);
         //transitionScreen.SetActive(true);
-        StartCoroutine(TransitionScreen());
 
 
         cameraDrumsGame.SetActive(true);
@@ -259,25 +242,11 @@ public class GameManager : MonoBehaviour
         buttonReturn.SetActive(true);
 
     }
-    public void PlayCongo()
-    {
-        buttonCongo.SetActive(false);
-        cameraCongo.SetActive(false);
-        Info2.SetActive(false);
-        Info3.SetActive(false);
-        //transitionScreen.SetActive(true);
-        StartCoroutine(TransitionScreen());
-
-
-        cameraCongoGame.SetActive(true);
-        gameUI.SetActive(true);
-        buttonReturn.SetActive(true);
-        //transitioned = false;
-        //transitionScreen.SetActive(false); 
-    }
+   
     public void MainToXylophoneSelect()
     {
         //cameraMain.SetActive(false);
+       
         cameraXylophone.SetActive(true);
         buttonXylophone.SetActive(true);
         buttonReturn.SetActive(true);
@@ -285,12 +254,13 @@ public class GameManager : MonoBehaviour
     }
     public void PlayXylophone()
     {
+        gameController.setCorrectInstrument(instrumentToID["Xylophone"]);
+        gameController.SelectReplay();
         buttonXylophone.SetActive(false);
         cameraXylophone.SetActive(false);
         Info2.SetActive(false);
         Info3.SetActive(false);
         //transitionScreen.SetActive(true);
-        StartCoroutine(TransitionScreen());
 
 
         cameraXylophoneGame.SetActive(true);
@@ -314,7 +284,6 @@ public class GameManager : MonoBehaviour
         Info2.SetActive(false);
         Info3.SetActive(false);
         //transitionScreen.SetActive(true);
-        StartCoroutine(TransitionScreen());
 
 
         cameraTromboneGame.SetActive(true);
@@ -326,7 +295,6 @@ public class GameManager : MonoBehaviour
     public void ReturnToHub()
     {
         //transitionScreen.SetActive(true);
-        StartCoroutine(TransitionScreen());
         /*foreach(GameObject tagged in turnOffs)
         {
             tagged.SetActive(false);
@@ -355,9 +323,6 @@ public class GameManager : MonoBehaviour
         cameraDrumsGame.SetActive(false);
 
         gameUI.SetActive(false);
-        buttonCongo.SetActive(false);
-        cameraCongo.SetActive(false);
-        cameraCongoGame.SetActive(false);
 
         gameUI.SetActive(false);
         buttonTrombone.SetActive(false);
@@ -379,12 +344,5 @@ public class GameManager : MonoBehaviour
         Debug.Log("returned and falsed");
         //transitionScreen.SetActive(false);
     }
-    public IEnumerator TransitionScreen()
-    {
-        transitionScreen.SetActive(true);
-        //transitioned = true;
-        yield return new WaitForSeconds(timerForTransition);
-        transitionScreen.SetActive(false);
-        
-    }
+
 }
