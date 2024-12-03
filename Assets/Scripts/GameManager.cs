@@ -27,52 +27,49 @@ public class GameManager : MonoBehaviour
     
     public GameObject[] turnOffs;
     public GameObject currentObject;
-    
+
+
+
+    public GameObject gameUI;
+    public GameController gameController;
 
     [Header("Guitar")]
-    public GameObject guitarCanvas;
     public GameObject buttonGuitar;
     [Header("Guitar Cams")]
     public GameObject cameraGuitar;
     public GameObject cameraGuitarGame;
 
     [Header("Piano")]
-    public GameObject pianoCanvas;
     public GameObject buttonPiano;
     [Header("Piano Cams")]
     public GameObject cameraPiano;
     public GameObject cameraPianoGame;
 
     [Header("Drums")]
-    public GameObject drumsCanvas;
     public GameObject buttonDrums;
     [Header("Drums Cams")]
     public GameObject cameraDrums;
     public GameObject cameraDrumsGame;
 
     [Header("Trombone")]
-    public GameObject tromboneCanvas;
     public GameObject buttonTrombone;
     [Header("Trombone Cams")]
     public GameObject cameraTrombone;
     public GameObject cameraTromboneGame;
 
     [Header("Cello")]
-    public GameObject celloCanvas;
     public GameObject buttonCello;
     [Header("Cello Cams")]
     public GameObject cameraCello;
     public GameObject cameraCelloGame;
 
     [Header("Xylophone")]
-    public GameObject xylophoneCanvas;
     public GameObject buttonXylophone;
     [Header("Xylophone Cams")]
     public GameObject cameraXylophone;
     public GameObject cameraXylophoneGame;
 
     [Header("Congo Drum")]
-    public GameObject congoCanvas;
     public GameObject buttonCongo;
     [Header("Congo Cams")]
     public GameObject cameraCongo;
@@ -109,37 +106,31 @@ public class GameManager : MonoBehaviour
         buttonReturn.SetActive(false);
         cameraMain.SetActive(true);
         
-        guitarCanvas.SetActive(false);
         buttonGuitar.SetActive(false);
         cameraGuitar.SetActive(false);
         cameraGuitarGame.SetActive(false);
         
-        pianoCanvas.SetActive(false);
+
         buttonPiano.SetActive(false);
         cameraPiano.SetActive(false);
         cameraPianoGame.SetActive(false);
 
-        drumsCanvas.SetActive(false);
         buttonDrums.SetActive(false);
         cameraDrums.SetActive(false);
         cameraDrumsGame.SetActive(false);
 
-        congoCanvas.SetActive(false);
         buttonCongo.SetActive(false);
         cameraCongo.SetActive(false);
         cameraCongoGame.SetActive(false);
 
-        tromboneCanvas.SetActive(false);
         buttonTrombone.SetActive(false);
         cameraTrombone.SetActive(false);
         cameraTromboneGame.SetActive(false);
 
-        celloCanvas.SetActive(false);
         buttonCello.SetActive(false);
         cameraCello.SetActive(false);
         cameraCelloGame.SetActive(false);
 
-        xylophoneCanvas.SetActive(false);
         buttonXylophone.SetActive(false);
         cameraXylophone.SetActive(false);
         cameraXylophoneGame.SetActive(false);
@@ -180,7 +171,7 @@ public class GameManager : MonoBehaviour
        
         
         cameraGuitarGame.SetActive(true);
-        guitarCanvas.SetActive(true);
+        gameUI.SetActive(true);
             buttonReturn.SetActive(true);
             //transitioned = false;
         
@@ -207,7 +198,7 @@ public class GameManager : MonoBehaviour
 
 
         cameraPianoGame.SetActive(true);
-        pianoCanvas.SetActive(true);
+        gameUI.SetActive(true);
         buttonReturn.SetActive(true);
         //transitioned = false;
         //transitionScreen.SetActive(false); 
@@ -231,7 +222,7 @@ public class GameManager : MonoBehaviour
 
 
         cameraCelloGame.SetActive(true);
-        celloCanvas.SetActive(true);
+        gameUI.SetActive(true);
         buttonReturn.SetActive(true);
         //transitioned = false;
         //transitionScreen.SetActive(false); 
@@ -255,7 +246,7 @@ public class GameManager : MonoBehaviour
 
 
         cameraDrumsGame.SetActive(true);
-        drumsCanvas.SetActive(true);
+        gameUI.SetActive(true);
         buttonReturn.SetActive(true);
         //transitioned = false;
         //transitionScreen.SetActive(false); 
@@ -279,7 +270,7 @@ public class GameManager : MonoBehaviour
 
 
         cameraCongoGame.SetActive(true);
-        congoCanvas.SetActive(true);
+        gameUI.SetActive(true);
         buttonReturn.SetActive(true);
         //transitioned = false;
         //transitionScreen.SetActive(false); 
@@ -303,7 +294,7 @@ public class GameManager : MonoBehaviour
 
 
         cameraXylophoneGame.SetActive(true);
-        xylophoneCanvas.SetActive(true);
+        gameUI.SetActive(true);
         buttonReturn.SetActive(true);
         //transitioned = false;
         //transitionScreen.SetActive(false); 
@@ -327,7 +318,7 @@ public class GameManager : MonoBehaviour
 
 
         cameraTromboneGame.SetActive(true);
-        tromboneCanvas.SetActive(true);
+        gameUI.SetActive(true);
         buttonReturn.SetActive(true);
         //transitioned = false;
         //transitionScreen.SetActive(false); 
@@ -348,37 +339,37 @@ public class GameManager : MonoBehaviour
         
         buttonGuitar.SetActive(false);*/
         buttonReturn.SetActive(false);
-        guitarCanvas.SetActive(false);
+        gameUI.SetActive(false);
         buttonGuitar.SetActive(false);
         cameraGuitar.SetActive(false);
         cameraGuitarGame.SetActive(false);
 
-        pianoCanvas.SetActive(false);
+        gameUI.SetActive(false);
         buttonPiano.SetActive(false);
         cameraPiano.SetActive(false);
         cameraPianoGame.SetActive(false);
 
-        drumsCanvas.SetActive(false);
+        gameUI.SetActive(false);
         buttonDrums.SetActive(false);
         cameraDrums.SetActive(false);
         cameraDrumsGame.SetActive(false);
 
-        congoCanvas.SetActive(false);
+        gameUI.SetActive(false);
         buttonCongo.SetActive(false);
         cameraCongo.SetActive(false);
         cameraCongoGame.SetActive(false);
 
-        tromboneCanvas.SetActive(false);
+        gameUI.SetActive(false);
         buttonTrombone.SetActive(false);
         cameraTrombone.SetActive(false);
         cameraTromboneGame.SetActive(false);
 
-        celloCanvas.SetActive(false);
+        gameUI.SetActive(false);
         buttonCello.SetActive(false);
         cameraCello.SetActive(false);
         cameraCelloGame.SetActive(false);
 
-        xylophoneCanvas.SetActive(false);
+        gameUI.SetActive(false);
         buttonXylophone.SetActive(false);
         cameraXylophone.SetActive(false);
         cameraXylophoneGame.SetActive(false);
