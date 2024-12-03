@@ -33,10 +33,9 @@ public class GameController : MonoBehaviour
         m_AudioSource.clip = instrument.audioClips[current_melody];
         m_AudioSource.Play();
     }
-    private void Start()
+    public void setInstrument(int instrumentID)
     {
-        // should be the actual instrument
-        correctInstrument = Random.Range(0, instruments.Length);
+        correctInstrument = instrumentID;
         // set the current instruments such that it contains the correct instrument and 3 other random ones that are unique
         currentInstruments = new int[] { -1, -1, -1, -1 };
         int correctIndex = Random.Range(0, 3);
@@ -56,10 +55,17 @@ public class GameController : MonoBehaviour
                 }
                 currentInstruments[i] = randominstrument;
             }
-            
+
         }
-        
-        current_melody = Random.Range(0,melodies.Length);
+
+        current_melody = Random.Range(0, melodies.Length);
+    }
+    private void Start()
+    {
+        setInstrument(Random.Range(0, instruments.Length));
+
+        // should be the actual instrument
+
     }
     private void Awake()
     {
