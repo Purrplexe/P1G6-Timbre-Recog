@@ -4885,8 +4885,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -156.764, y: 469.257}
-  m_SizeDelta: {x: 1606.512, y: 140.426}
+  m_AnchoredPosition: {x: -553.72, y: 460.29}
+  m_SizeDelta: {x: 812.6, y: 158.36}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &481487529
 MonoBehaviour:
@@ -4921,7 +4921,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Pick any instrument! Your choice!
+  m_Text: Shoot or die!
 --- !u!222 &481487530
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -8877,7 +8877,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Play the Piano!
+  m_text: Play the Paino!
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -9334,8 +9334,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0.0000076293945, y: 0.0000019073486}
-  m_SizeDelta: {x: 946.035, y: 161.663}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 710, y: 120}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &876274694
 MonoBehaviour:
@@ -9370,7 +9370,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Press anywhere to start!
+  m_text: Start of the starting
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -11780,8 +11780,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -166.694, y: 300.742}
-  m_SizeDelta: {x: 1586.652, y: 160.715}
+  m_AnchoredPosition: {x: -553.72, y: 290.99}
+  m_SizeDelta: {x: 812.6, y: 180.22}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1100396402
 MonoBehaviour:
@@ -11816,7 +11816,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Actuelly, pls pick the Guitar...
+  m_Text: Your choice!
 --- !u!222 &1100396403
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -17699,7 +17699,7 @@ MonoBehaviour:
     m_SelectOnDown: {fileID: 0}
     m_SelectOnLeft: {fileID: 0}
     m_SelectOnRight: {fileID: 0}
-  m_Transition: 0
+  m_Transition: 1
   m_Colors:
     m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
     m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
@@ -17749,7 +17749,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 0.84313726}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -21908,7 +21908,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 
+  m_Text: We are so back!
 --- !u!222 &2144024564
 CanvasRenderer:
   m_ObjectHideFlags: 0
