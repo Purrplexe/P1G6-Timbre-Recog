@@ -39,6 +39,10 @@ public class GameManager : MonoBehaviour
     [Header("Piano")]
     public GameObject pianoCanvas;
     public GameObject buttonPiano;
+    public MaterialChanger changerPiano1;
+    public MaterialChanger changerPiano2;
+    public MaterialChanger changerPiano3;
+    public MaterialChanger changerPiano4;
     [Header("Piano Cams")]
     public GameObject cameraPiano;
     public GameObject cameraPianoGame;
@@ -77,6 +81,7 @@ public class GameManager : MonoBehaviour
     [Header("Congo Cams")]
     public GameObject cameraCongo;
     public GameObject cameraCongoGame;
+    
     // Hardcoded variables you may want to tune.
     //private float startingTime = 30f;
 
@@ -182,6 +187,10 @@ public class GameManager : MonoBehaviour
         cameraGuitarGame.SetActive(true);
         guitarCanvas.SetActive(true);
             buttonReturn.SetActive(true);
+        changerPiano1.isBeat = true;
+        changerPiano2.isBeat = true;
+        changerPiano3.isBeat = true;
+        changerPiano4.isBeat = true;
             //transitioned = false;
         
         

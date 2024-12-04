@@ -799,6 +799,10 @@ MonoBehaviour:
   cameraGuitarGame: {fileID: 2132462102}
   pianoCanvas: {fileID: 593671301}
   buttonPiano: {fileID: 1872635861}
+  changerPiano1: {fileID: 1079132039}
+  changerPiano2: {fileID: 571966100}
+  changerPiano3: {fileID: 1111902273}
+  changerPiano4: {fileID: 133461646}
   cameraPiano: {fileID: 1584871385}
   cameraPianoGame: {fileID: 676261808}
   drumsCanvas: {fileID: 26206401}
@@ -1253,6 +1257,26 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 128274161}
   m_Mesh: {fileID: 10206, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1 &133461642 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: -9205347951241810782, guid: 471c97c456b56cb4a9627ab8662bf5c3, type: 3}
+  m_PrefabInstance: {fileID: 1868277831}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &133461646
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 133461642}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 06141210814ef554a9adfd14006fffbe, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  newMaterialRef: {fileID: 2100000, guid: a2db6c44b1fac8448a81c4aefb65c6de, type: 2}
+  originalMaterial: {fileID: 2100000, guid: be145f4426a12204fb4246f3671f44f1, type: 2}
+  isBeat: 0
 --- !u!1 &136641945
 GameObject:
   m_ObjectHideFlags: 0
@@ -6242,6 +6266,26 @@ Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 484dc108bca10094495cd6c60e397bd6, type: 3}
   m_PrefabInstance: {fileID: 571946391}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &571966096 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: -516098083770646512, guid: 471c97c456b56cb4a9627ab8662bf5c3, type: 3}
+  m_PrefabInstance: {fileID: 1868277831}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &571966100
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 571966096}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 06141210814ef554a9adfd14006fffbe, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  newMaterialRef: {fileID: 2100000, guid: a2db6c44b1fac8448a81c4aefb65c6de, type: 2}
+  originalMaterial: {fileID: 2100000, guid: cbfa426474ab5a6468b98f86f31993f3, type: 2}
+  isBeat: 0
 --- !u!1 &575319878
 GameObject:
   m_ObjectHideFlags: 0
@@ -9671,8 +9715,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 888422765}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.20108546, y: -0.36203396, z: 0.07490184, w: 0.90713054}
-  m_LocalPosition: {x: 1350.297, y: 225.14423, z: 839.69104}
+  m_LocalRotation: {x: 0.24436462, y: -0.31828165, z: 0.08528333, w: 0.9119811}
+  m_LocalPosition: {x: 3043.7197, y: 187.72803, z: 872.97095}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -11733,6 +11777,26 @@ MonoBehaviour:
   - {fileID: 8300000, guid: 4cf3bd42184b59347a73b0bf9e6c4961, type: 3}
   - {fileID: 8300000, guid: 433023fa58aba744d96ffda94723733f, type: 3}
   instrumentName: Flute
+--- !u!1 &1079132035 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: -8391222552659086748, guid: 471c97c456b56cb4a9627ab8662bf5c3, type: 3}
+  m_PrefabInstance: {fileID: 1868277831}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1079132039
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1079132035}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 06141210814ef554a9adfd14006fffbe, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  newMaterialRef: {fileID: 2100000, guid: a2db6c44b1fac8448a81c4aefb65c6de, type: 2}
+  originalMaterial: {fileID: 2100000, guid: e84b6e695a6e7204999b3d438b0c2972, type: 2}
+  isBeat: 0
 --- !u!1 &1087695766
 GameObject:
   m_ObjectHideFlags: 3
@@ -12110,6 +12174,26 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 12a79b3f7bafff441a421f4efc9e6145, type: 3}
+--- !u!1 &1111902269 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8416272007918961125, guid: 471c97c456b56cb4a9627ab8662bf5c3, type: 3}
+  m_PrefabInstance: {fileID: 1868277831}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1111902273
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1111902269}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 06141210814ef554a9adfd14006fffbe, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  newMaterialRef: {fileID: 2100000, guid: a2db6c44b1fac8448a81c4aefb65c6de, type: 2}
+  originalMaterial: {fileID: 2100000, guid: 8b76263488822f2449dc4e033b2c9a28, type: 2}
+  isBeat: 0
 --- !u!1 &1125104891
 GameObject:
   m_ObjectHideFlags: 0
@@ -20026,7 +20110,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 471c97c456b56cb4a9627ab8662bf5c3, type: 3}
       propertyPath: m_Name
-      value: painoReal
+      value: Piano
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -20041,6 +20125,18 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 471c97c456b56cb4a9627ab8662bf5c3, type: 3}
       insertIndex: -1
       addedObject: {fileID: 2014729863}
+    - targetCorrespondingSourceObject: {fileID: -8391222552659086748, guid: 471c97c456b56cb4a9627ab8662bf5c3, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1079132039}
+    - targetCorrespondingSourceObject: {fileID: -516098083770646512, guid: 471c97c456b56cb4a9627ab8662bf5c3, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 571966100}
+    - targetCorrespondingSourceObject: {fileID: 8416272007918961125, guid: 471c97c456b56cb4a9627ab8662bf5c3, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1111902273}
+    - targetCorrespondingSourceObject: {fileID: -9205347951241810782, guid: 471c97c456b56cb4a9627ab8662bf5c3, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 133461646}
   m_SourcePrefab: {fileID: 100100000, guid: 471c97c456b56cb4a9627ab8662bf5c3, type: 3}
 --- !u!1 &1872635861
 GameObject:
