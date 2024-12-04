@@ -22,7 +22,6 @@ public class GameManager : MonoBehaviour
     public float timerForTransition;
     private string selectedInstrument;
     //For later
-    
     public GameObject[] turnOffs;
     public GameObject currentObject;
     private Dictionary<string, int> instrumentToID = new Dictionary<string, int>();
@@ -64,6 +63,7 @@ public class GameManager : MonoBehaviour
     }
     public void SelectInstrument(string instrument)
     {
+        Debug.Log(instrument + " clicked");
         instrument = instrument.ToLower();
         currentScene = scenes[GetSceneIndex(instrument)];
         currentScene.selectCamera.SetActive(true);
