@@ -22,6 +22,7 @@ public class GameManager : MonoBehaviour
     public GameObject confirmationPrompt;
     private PlayScene currentScene;
     public Selectable defaultSelect;
+    public GameObject hubCam;
     public bool transitioned = false;
     public float timerForTransition;
     private string selectedInstrument;
@@ -68,9 +69,8 @@ public class GameManager : MonoBehaviour
     {
         instrument = instrument.ToLower();
         currentScene = scenes[GetSceneIndex(instrument)];
-        currentScene.selectCamera.SetActive(true);
         selectedInstrument = instrument;
-        currentScene.selectCamera.SetActive(true);
+        SwitchToCam(currentScene.selectCamera);
         //get second childs text which is the play button
         confirmationPrompt.GetComponentsInChildren<TMP_Text>()[1].text = "Play the " + instrument + "!";
         confirmationPrompt.SetActive(true);
@@ -80,7 +80,7 @@ public class GameManager : MonoBehaviour
     {
         gameController.setCorrectInstrument(instrumentToID[selectedInstrument]);
         confirmationPrompt.SetActive(false) ;
-        currentScene.gameCamera.GetComponent<CinemachineVirtualCamera>().enabled = true;
+        SwitchToCam(currentScene.gameCamera);
         gameUI.SetActive(true);
     }
 
@@ -90,9 +90,19 @@ public class GameManager : MonoBehaviour
         defaultSelect.Select();
         confirmationPrompt.SetActive(false);
         gameUI.SetActive(false);
-        cameraMain.SetActive(true);
+        SwitchToCam(hubCam);
         Debug.Log("returned and falsed");
         //transitionScreen.SetActive(false);
     }
-
+    private void SwitchToCam(GameObject camera)
+    {
+        DisableCams();
+        camera.SetActive(true);
+    }
+    private void DisableCams()
+    {
+        foreach (CinemachineVirtualCamera camera in Resources.FindObjectsOfTypeAll<CinemachineVirtualCamera>()) {
+            camera.gameObject.SetActive(false);
+        }
+    }
 }
