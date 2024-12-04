@@ -633,6 +633,7 @@ MonoBehaviour:
   buttonReturn: {fileID: 1411959781}
   cameraMain: {fileID: 888422765}
   confirmationPrompt: {fileID: 1523470016}
+  defaultSelect: {fileID: 593402194}
   transitioned: 0
   timerForTransition: 0.9
   turnOffs:
@@ -654,7 +655,6 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
-  currentObject: {fileID: 0}
   gameUI: {fileID: 1135800857}
   gameController: {fileID: 1659050850}
   scenes:
@@ -2859,7 +2859,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 389789313}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 108402590}
+        m_TargetAssemblyTypeName: GameManager, Assembly-CSharp
+        m_MethodName: ReturnToHub
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &389789313
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -12430,11 +12442,11 @@ PrefabInstance:
     - target: {fileID: 1064937210448697769, guid: dabd5923d389e984fa5e51f5abc5b240, type: 3}
       propertyPath: m_Navigation.m_SelectOnLeft
       value: 
-      objectReference: {fileID: 1690199027}
+      objectReference: {fileID: 972958505}
     - target: {fileID: 1064937210448697769, guid: dabd5923d389e984fa5e51f5abc5b240, type: 3}
       propertyPath: m_Navigation.m_SelectOnRight
       value: 
-      objectReference: {fileID: 66976166}
+      objectReference: {fileID: 972958505}
     - target: {fileID: 1181449165278907791, guid: dabd5923d389e984fa5e51f5abc5b240, type: 3}
       propertyPath: controller
       value: 
@@ -12446,7 +12458,7 @@ PrefabInstance:
     - target: {fileID: 1719419419580037853, guid: dabd5923d389e984fa5e51f5abc5b240, type: 3}
       propertyPath: m_Navigation.m_SelectOnUp
       value: 
-      objectReference: {fileID: 972958505}
+      objectReference: {fileID: 389789312}
     - target: {fileID: 1719419419580037853, guid: dabd5923d389e984fa5e51f5abc5b240, type: 3}
       propertyPath: m_Colors.m_SelectedColor.b
       value: 0.6283563
