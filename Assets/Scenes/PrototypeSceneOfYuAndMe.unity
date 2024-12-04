@@ -984,6 +984,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2117053962590460268, guid: dabd5923d389e984fa5e51f5abc5b240, type: 3}
+      propertyPath: m_fontStyle
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 2301028580669508583, guid: dabd5923d389e984fa5e51f5abc5b240, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
@@ -1004,6 +1008,10 @@ PrefabInstance:
       propertyPath: controller
       value: 
       objectReference: {fileID: 373014731}
+    - target: {fileID: 2670818800759993445, guid: dabd5923d389e984fa5e51f5abc5b240, type: 3}
+      propertyPath: m_fontStyle
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3441649169479699967, guid: dabd5923d389e984fa5e51f5abc5b240, type: 3}
       propertyPath: m_SizeDelta.x
       value: 240
@@ -1032,6 +1040,10 @@ PrefabInstance:
       propertyPath: controller
       value: 
       objectReference: {fileID: 373014731}
+    - target: {fileID: 4531324087480742773, guid: dabd5923d389e984fa5e51f5abc5b240, type: 3}
+      propertyPath: m_fontStyle
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4879190559347902824, guid: dabd5923d389e984fa5e51f5abc5b240, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
@@ -1104,6 +1116,10 @@ PrefabInstance:
       propertyPath: m_fontSizeBase
       value: 10
       objectReference: {fileID: 0}
+    - target: {fileID: 6550225409675646753, guid: dabd5923d389e984fa5e51f5abc5b240, type: 3}
+      propertyPath: m_fontStyle
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7020301907703510229, guid: dabd5923d389e984fa5e51f5abc5b240, type: 3}
       propertyPath: m_Name
       value: CanvasGuitar
@@ -1112,6 +1128,10 @@ PrefabInstance:
       propertyPath: controller
       value: 
       objectReference: {fileID: 373014731}
+    - target: {fileID: 7608668001044114926, guid: dabd5923d389e984fa5e51f5abc5b240, type: 3}
+      propertyPath: m_fontStyle
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -1399,6 +1419,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 803837dc8106fc147b4231929c219f58, type: 3}
       propertyPath: m_Name
       value: Congas_Drum
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 803837dc8106fc147b4231929c219f58, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -2532,7 +2556,7 @@ MonoBehaviour:
     m_SelectOnDown: {fileID: 0}
     m_SelectOnLeft: {fileID: 0}
     m_SelectOnRight: {fileID: 0}
-  m_Transition: 1
+  m_Transition: 0
   m_Colors:
     m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
     m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
@@ -4885,8 +4909,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -553.72, y: 460.29}
-  m_SizeDelta: {x: 812.6, y: 158.36}
+  m_AnchoredPosition: {x: -0.0097504, y: 460.28}
+  m_SizeDelta: {x: 1920, y: 158.37}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &481487529
 MonoBehaviour:
@@ -4921,7 +4945,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Shoot or die!
+  m_Text: Choose an instrument by clicking on it!
 --- !u!222 &481487530
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -5263,6 +5287,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2117053962590460268, guid: dabd5923d389e984fa5e51f5abc5b240, type: 3}
+      propertyPath: m_fontStyle
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 2301028580669508583, guid: dabd5923d389e984fa5e51f5abc5b240, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
@@ -5283,6 +5311,10 @@ PrefabInstance:
       propertyPath: controller
       value: 
       objectReference: {fileID: 373014731}
+    - target: {fileID: 2670818800759993445, guid: dabd5923d389e984fa5e51f5abc5b240, type: 3}
+      propertyPath: m_fontStyle
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3441649169479699967, guid: dabd5923d389e984fa5e51f5abc5b240, type: 3}
       propertyPath: m_SizeDelta.x
       value: 240
@@ -5311,6 +5343,10 @@ PrefabInstance:
       propertyPath: controller
       value: 
       objectReference: {fileID: 373014731}
+    - target: {fileID: 4531324087480742773, guid: dabd5923d389e984fa5e51f5abc5b240, type: 3}
+      propertyPath: m_fontStyle
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4879190559347902824, guid: dabd5923d389e984fa5e51f5abc5b240, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
@@ -5383,6 +5419,10 @@ PrefabInstance:
       propertyPath: m_fontSizeBase
       value: 10
       objectReference: {fileID: 0}
+    - target: {fileID: 6550225409675646753, guid: dabd5923d389e984fa5e51f5abc5b240, type: 3}
+      propertyPath: m_fontStyle
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7020301907703510229, guid: dabd5923d389e984fa5e51f5abc5b240, type: 3}
       propertyPath: m_Name
       value: CanvasCello
@@ -5391,6 +5431,10 @@ PrefabInstance:
       propertyPath: controller
       value: 
       objectReference: {fileID: 373014731}
+    - target: {fileID: 7608668001044114926, guid: dabd5923d389e984fa5e51f5abc5b240, type: 3}
+      propertyPath: m_fontStyle
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -5788,7 +5832,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &560149659
 RectTransform:
   m_ObjectHideFlags: 0
@@ -8877,7 +8921,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Play the Paino!
+  m_text: Play the Piano!
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -9334,8 +9378,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 710, y: 120}
+  m_AnchoredPosition: {x: -0.000015258789, y: -55.000015}
+  m_SizeDelta: {x: 897.34, y: 110}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &876274694
 MonoBehaviour:
@@ -9370,7 +9414,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Start of the starting
+  m_text: Click anywhere to start!
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -9513,7 +9557,7 @@ Camera:
     height: 1
   near clip plane: 0.1
   far clip plane: 5000
-  field of view: 60
+  field of view: 60.000004
   orthographic: 0
   orthographic size: 10
   m_Depth: -1
@@ -9539,8 +9583,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 888422765}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.18496467, y: -0.3488671, z: 0.07522914, w: 0.915653}
-  m_LocalPosition: {x: 415.87372, y: 213, z: 24.599976}
+  m_LocalRotation: {x: 0.24436462, y: -0.31828165, z: 0.08528333, w: 0.9119811}
+  m_LocalPosition: {x: 1350.2815, y: 189.48459, z: 839.7067}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -12745,6 +12789,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Congo Room Game (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 858ca9cf4b584404a92ed019c98b1a4c, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects:
@@ -15424,6 +15472,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2117053962590460268, guid: dabd5923d389e984fa5e51f5abc5b240, type: 3}
+      propertyPath: m_fontStyle
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 2301028580669508583, guid: dabd5923d389e984fa5e51f5abc5b240, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
@@ -15444,6 +15496,10 @@ PrefabInstance:
       propertyPath: controller
       value: 
       objectReference: {fileID: 373014731}
+    - target: {fileID: 2670818800759993445, guid: dabd5923d389e984fa5e51f5abc5b240, type: 3}
+      propertyPath: m_fontStyle
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3441649169479699967, guid: dabd5923d389e984fa5e51f5abc5b240, type: 3}
       propertyPath: m_SizeDelta.x
       value: 240
@@ -15472,6 +15528,10 @@ PrefabInstance:
       propertyPath: controller
       value: 
       objectReference: {fileID: 373014731}
+    - target: {fileID: 4531324087480742773, guid: dabd5923d389e984fa5e51f5abc5b240, type: 3}
+      propertyPath: m_fontStyle
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4879190559347902824, guid: dabd5923d389e984fa5e51f5abc5b240, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
@@ -15544,6 +15604,10 @@ PrefabInstance:
       propertyPath: m_fontSizeBase
       value: 10
       objectReference: {fileID: 0}
+    - target: {fileID: 6550225409675646753, guid: dabd5923d389e984fa5e51f5abc5b240, type: 3}
+      propertyPath: m_fontStyle
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7020301907703510229, guid: dabd5923d389e984fa5e51f5abc5b240, type: 3}
       propertyPath: m_Name
       value: CanvasDrums
@@ -15552,6 +15616,10 @@ PrefabInstance:
       propertyPath: controller
       value: 
       objectReference: {fileID: 373014731}
+    - target: {fileID: 7608668001044114926, guid: dabd5923d389e984fa5e51f5abc5b240, type: 3}
+      propertyPath: m_fontStyle
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -16117,6 +16185,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2117053962590460268, guid: dabd5923d389e984fa5e51f5abc5b240, type: 3}
+      propertyPath: m_fontStyle
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 2301028580669508583, guid: dabd5923d389e984fa5e51f5abc5b240, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
@@ -16137,6 +16209,10 @@ PrefabInstance:
       propertyPath: controller
       value: 
       objectReference: {fileID: 373014731}
+    - target: {fileID: 2670818800759993445, guid: dabd5923d389e984fa5e51f5abc5b240, type: 3}
+      propertyPath: m_fontStyle
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3441649169479699967, guid: dabd5923d389e984fa5e51f5abc5b240, type: 3}
       propertyPath: m_SizeDelta.x
       value: 240
@@ -16165,6 +16241,10 @@ PrefabInstance:
       propertyPath: controller
       value: 
       objectReference: {fileID: 373014731}
+    - target: {fileID: 4531324087480742773, guid: dabd5923d389e984fa5e51f5abc5b240, type: 3}
+      propertyPath: m_fontStyle
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4879190559347902824, guid: dabd5923d389e984fa5e51f5abc5b240, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
@@ -16237,6 +16317,10 @@ PrefabInstance:
       propertyPath: m_fontSizeBase
       value: 10
       objectReference: {fileID: 0}
+    - target: {fileID: 6550225409675646753, guid: dabd5923d389e984fa5e51f5abc5b240, type: 3}
+      propertyPath: m_fontStyle
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7020301907703510229, guid: dabd5923d389e984fa5e51f5abc5b240, type: 3}
       propertyPath: m_Name
       value: CanvasTrombone
@@ -16245,6 +16329,10 @@ PrefabInstance:
       propertyPath: controller
       value: 
       objectReference: {fileID: 373014731}
+    - target: {fileID: 7608668001044114926, guid: dabd5923d389e984fa5e51f5abc5b240, type: 3}
+      propertyPath: m_fontStyle
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -16456,6 +16544,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2117053962590460268, guid: dabd5923d389e984fa5e51f5abc5b240, type: 3}
+      propertyPath: m_fontStyle
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 2301028580669508583, guid: dabd5923d389e984fa5e51f5abc5b240, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
@@ -16476,6 +16568,10 @@ PrefabInstance:
       propertyPath: controller
       value: 
       objectReference: {fileID: 373014731}
+    - target: {fileID: 2670818800759993445, guid: dabd5923d389e984fa5e51f5abc5b240, type: 3}
+      propertyPath: m_fontStyle
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3441649169479699967, guid: dabd5923d389e984fa5e51f5abc5b240, type: 3}
       propertyPath: m_SizeDelta.x
       value: 240
@@ -16504,6 +16600,10 @@ PrefabInstance:
       propertyPath: controller
       value: 
       objectReference: {fileID: 373014731}
+    - target: {fileID: 4531324087480742773, guid: dabd5923d389e984fa5e51f5abc5b240, type: 3}
+      propertyPath: m_fontStyle
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4879190559347902824, guid: dabd5923d389e984fa5e51f5abc5b240, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
@@ -16576,6 +16676,10 @@ PrefabInstance:
       propertyPath: m_fontSizeBase
       value: 10
       objectReference: {fileID: 0}
+    - target: {fileID: 6550225409675646753, guid: dabd5923d389e984fa5e51f5abc5b240, type: 3}
+      propertyPath: m_fontStyle
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7020301907703510229, guid: dabd5923d389e984fa5e51f5abc5b240, type: 3}
       propertyPath: m_Name
       value: CanvasXylophone
@@ -16584,6 +16688,10 @@ PrefabInstance:
       propertyPath: controller
       value: 
       objectReference: {fileID: 373014731}
+    - target: {fileID: 7608668001044114926, guid: dabd5923d389e984fa5e51f5abc5b240, type: 3}
+      propertyPath: m_fontStyle
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -17749,7 +17857,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 0.84313726}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -18225,6 +18333,10 @@ PrefabInstance:
     - target: {fileID: 7020301907703510229, guid: dabd5923d389e984fa5e51f5abc5b240, type: 3}
       propertyPath: m_Name
       value: CanvasCongo
+      objectReference: {fileID: 0}
+    - target: {fileID: 7020301907703510229, guid: dabd5923d389e984fa5e51f5abc5b240, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7024341416136644325, guid: dabd5923d389e984fa5e51f5abc5b240, type: 3}
       propertyPath: controller
@@ -19098,6 +19210,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2117053962590460268, guid: dabd5923d389e984fa5e51f5abc5b240, type: 3}
+      propertyPath: m_fontStyle
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 2301028580669508583, guid: dabd5923d389e984fa5e51f5abc5b240, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
@@ -19118,6 +19234,10 @@ PrefabInstance:
       propertyPath: controller
       value: 
       objectReference: {fileID: 373014731}
+    - target: {fileID: 2670818800759993445, guid: dabd5923d389e984fa5e51f5abc5b240, type: 3}
+      propertyPath: m_fontStyle
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3441649169479699967, guid: dabd5923d389e984fa5e51f5abc5b240, type: 3}
       propertyPath: m_SizeDelta.x
       value: 240
@@ -19146,6 +19266,10 @@ PrefabInstance:
       propertyPath: controller
       value: 
       objectReference: {fileID: 373014731}
+    - target: {fileID: 4531324087480742773, guid: dabd5923d389e984fa5e51f5abc5b240, type: 3}
+      propertyPath: m_fontStyle
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4879190559347902824, guid: dabd5923d389e984fa5e51f5abc5b240, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
@@ -19218,6 +19342,10 @@ PrefabInstance:
       propertyPath: m_fontSizeBase
       value: 10
       objectReference: {fileID: 0}
+    - target: {fileID: 6550225409675646753, guid: dabd5923d389e984fa5e51f5abc5b240, type: 3}
+      propertyPath: m_fontStyle
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7020301907703510229, guid: dabd5923d389e984fa5e51f5abc5b240, type: 3}
       propertyPath: m_Name
       value: CanvasPiano
@@ -19226,6 +19354,10 @@ PrefabInstance:
       propertyPath: controller
       value: 
       objectReference: {fileID: 373014731}
+    - target: {fileID: 7608668001044114926, guid: dabd5923d389e984fa5e51f5abc5b240, type: 3}
+      propertyPath: m_fontStyle
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -21908,7 +22040,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: We are so back!
+  m_Text: 
 --- !u!222 &2144024564
 CanvasRenderer:
   m_ObjectHideFlags: 0
