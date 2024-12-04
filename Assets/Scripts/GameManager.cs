@@ -1,9 +1,12 @@
+using Cinemachine;
 using JetBrains.Annotations;
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using TMPro;
+using UnityEditor.Experimental.GraphView;
 using UnityEngine;
+using UnityEngine.UI;
 using static System.TimeZoneInfo;
 
 public class GameManager : MonoBehaviour
@@ -18,12 +21,12 @@ public class GameManager : MonoBehaviour
     public GameObject cameraMain;
     public GameObject confirmationPrompt;
     private PlayScene currentScene;
+    public Selectable defaultSelect;
     public bool transitioned = false;
     public float timerForTransition;
     private string selectedInstrument;
     //For later
     public GameObject[] turnOffs;
-    public GameObject currentObject;
     private Dictionary<string, int> instrumentToID = new Dictionary<string, int>();
 
 
@@ -63,7 +66,6 @@ public class GameManager : MonoBehaviour
     }
     public void SelectInstrument(string instrument)
     {
-        Debug.Log(instrument + " clicked");
         instrument = instrument.ToLower();
         currentScene = scenes[GetSceneIndex(instrument)];
         currentScene.selectCamera.SetActive(true);
@@ -74,19 +76,19 @@ public class GameManager : MonoBehaviour
         confirmationPrompt.SetActive(true);
         
     }
-    public void PlayInstrument(string instrument)
+    public void PlayInstrument()
     {
-        instrument = instrument.ToLower();
-        gameController.setCorrectInstrument(instrumentToID[instrument]);
+        gameController.setCorrectInstrument(instrumentToID[selectedInstrument]);
         confirmationPrompt.SetActive(false) ;
-        currentScene.gameCamera.SetActive(true);
+        currentScene.gameCamera.GetComponent<CinemachineVirtualCamera>().enabled = true;
         gameUI.SetActive(true);
     }
 
 
     public void ReturnToHub()
     {
-
+        defaultSelect.Select();
+        confirmationPrompt.SetActive(false);
         gameUI.SetActive(false);
         cameraMain.SetActive(true);
         Debug.Log("returned and falsed");
