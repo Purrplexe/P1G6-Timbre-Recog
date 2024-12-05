@@ -77,7 +77,9 @@ public class GameManager : MonoBehaviour
         confirmationPrompt.GetComponentsInChildren<TMP_Text>()[1].text = "Play the " + instrument + "!";
         confirmationPrompt.SetActive(true);
         //Select the play button
-        confirmationPrompt.GetComponentsInChildren<Selectable>().Last().Select();
+        confirmationPrompt.GetComponentsInChildren<Selectable>()
+            .Last()
+            .Select();
         
     }
     public void PlayInstrument()

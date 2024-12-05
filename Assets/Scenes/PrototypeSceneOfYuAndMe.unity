@@ -135,6 +135,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 972958505}
     - target: {fileID: 787848880782188515, guid: 8f8497fa3d99a8b42bd2b78b8b668b21, type: 3}
+      propertyPath: defaultSelect
+      value: 
+      objectReference: {fileID: 1866724689}
+    - target: {fileID: 787848880782188515, guid: 8f8497fa3d99a8b42bd2b78b8b668b21, type: 3}
       propertyPath: confirmationPrompt
       value: 
       objectReference: {fileID: 1261277768}
@@ -472,7 +476,7 @@ MonoBehaviour:
   - {fileID: 8300000, guid: 36cf3b19db61c8f478c4f8beeacbf50d, type: 3}
   - {fileID: 8300000, guid: 7dbef135373ee3a4098364f7a1e06c0c, type: 3}
   - {fileID: 8300000, guid: 77e04d127b5225b4bbe29b28c5e43f49, type: 3}
-  instrumentName: Trumpet
+  instrumentName: 
 --- !u!1 &50451835 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 471c97c456b56cb4a9627ab8662bf5c3, type: 3}
@@ -1098,7 +1102,7 @@ MonoBehaviour:
   - {fileID: 8300000, guid: 20ca9a46d880a2a4f84b3eb3cc31f8a3, type: 3}
   - {fileID: 8300000, guid: 5f09e8df90e77e84eb0f0f31ed3acd47, type: 3}
   - {fileID: 8300000, guid: 795ed3030e140e14886b304368b6239f, type: 3}
-  instrumentName: Cello
+  instrumentName: 
 --- !u!1 &184240002 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: a34535e93a7de774794c54d4e88a9cd8, type: 3}
@@ -2126,7 +2130,7 @@ MonoBehaviour:
   - {fileID: 8300000, guid: d0a9991c7352b8746aff00ca28c532d9, type: 3}
   - {fileID: 8300000, guid: f17b0bab1a44796418756f2b6f94baab, type: 3}
   - {fileID: 8300000, guid: 0c7e94f070df91e41a16338fde1c18ab, type: 3}
-  instrumentName: Trombone
+  instrumentName: 
 --- !u!4 &269882286 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 12a79b3f7bafff441a421f4efc9e6145, type: 3}
@@ -2292,7 +2296,7 @@ MonoBehaviour:
   - {fileID: 8300000, guid: 39f37681f57111148ad6cf3397601a3e, type: 3}
   - {fileID: 8300000, guid: 9ec130bf9285eec41ae3a2fac53aebd3, type: 3}
   - {fileID: 8300000, guid: d20ee1e5a7afd744aa24b818606ee425, type: 3}
-  instrumentName: Guitar
+  instrumentName: 
 --- !u!1001 &301930479
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3685,6 +3689,7 @@ GameObject:
   - component: {fileID: 452157600}
   - component: {fileID: 452157602}
   - component: {fileID: 452157601}
+  - component: {fileID: 452157603}
   m_Layer: 0
   m_Name: Drums
   m_TagString: Untagged
@@ -3726,12 +3731,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Navigation:
-    m_Mode: 3
+    m_Mode: 4
     m_WrapAround: 0
     m_SelectOnUp: {fileID: 0}
     m_SelectOnDown: {fileID: 0}
-    m_SelectOnLeft: {fileID: 0}
-    m_SelectOnRight: {fileID: 0}
+    m_SelectOnLeft: {fileID: 2014729863}
+    m_SelectOnRight: {fileID: 2053350635}
   m_Transition: 1
   m_Colors:
     m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
@@ -3790,6 +3795,20 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 56.13912, y: 19.402086, z: 26.84574}
   m_Center: {x: -12.075912, y: -83.47674, z: 77.14258}
+--- !u!114 &452157603
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 452157599}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 27c618e553aff5547bd7bd92b694d29b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  defaultMaterials: []
+  highlightMaterial: {fileID: 2100000, guid: 3f910e5ac9ff2df428a9a9567d0859a4, type: 2}
 --- !u!1 &477122716
 GameObject:
   m_ObjectHideFlags: 0
@@ -4013,6 +4032,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: a34535e93a7de774794c54d4e88a9cd8, type: 3}
       insertIndex: -1
       addedObject: {fileID: 593402194}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: a34535e93a7de774794c54d4e88a9cd8, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 593402198}
   m_SourcePrefab: {fileID: 100100000, guid: a34535e93a7de774794c54d4e88a9cd8, type: 3}
 --- !u!1 &482820258
 GameObject:
@@ -4514,7 +4536,7 @@ MonoBehaviour:
   - {fileID: 8300000, guid: b958a3ec556dfb54c9ec715d3ed55270, type: 3}
   - {fileID: 8300000, guid: d795e2f679a337a469282f489c49d0c7, type: 3}
   - {fileID: 8300000, guid: 800facd668ebc4d45ade9a4521b36f0c, type: 3}
-  instrumentName: Piano
+  instrumentName: 
 --- !u!114 &540730814 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 100311212497454112, guid: 19a88bbffae7c61489f7fc2d0e13c926, type: 3}
@@ -4564,7 +4586,7 @@ MonoBehaviour:
   - {fileID: 8300000, guid: 96a74aaa5001d914b92fd15603fa884e, type: 3}
   - {fileID: 8300000, guid: 84f62d4042e94f14c925385404bd6a9a, type: 3}
   - {fileID: 8300000, guid: 30269a103e729cc47b02d4ef0d92c542, type: 3}
-  instrumentName: Xylophone
+  instrumentName: 
 --- !u!4 &556106842
 Transform:
   m_ObjectHideFlags: 0
@@ -4948,12 +4970,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Navigation:
-    m_Mode: 3
+    m_Mode: 4
     m_WrapAround: 0
     m_SelectOnUp: {fileID: 0}
     m_SelectOnDown: {fileID: 0}
-    m_SelectOnLeft: {fileID: 0}
-    m_SelectOnRight: {fileID: 0}
+    m_SelectOnLeft: {fileID: 1962595824}
+    m_SelectOnRight: {fileID: 2014729863}
   m_Transition: 1
   m_Colors:
     m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
@@ -5012,6 +5034,20 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 0.9926891, y: 0.10236325, z: 0.110883825}
   m_Center: {x: -0.13515145, y: -0.00012619876, z: -0.023754165}
+--- !u!114 &593402198
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 184240002}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 27c618e553aff5547bd7bd92b694d29b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  defaultMaterials: []
+  highlightMaterial: {fileID: 2100000, guid: 3f910e5ac9ff2df428a9a9567d0859a4, type: 2}
 --- !u!114 &606072858 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 4988537322988799589, guid: 19a88bbffae7c61489f7fc2d0e13c926, type: 3}
@@ -5215,7 +5251,7 @@ MonoBehaviour:
   - {fileID: 8300000, guid: 3378e2c3f836b5e4a80acc4f4f10e23e, type: 3}
   - {fileID: 8300000, guid: 66b323b5ed3a4db42bfd13c0816ad952, type: 3}
   - {fileID: 8300000, guid: 6a02714df58fd3c4fbb11858b82363f3, type: 3}
-  instrumentName: Viola
+  instrumentName: 
 --- !u!1001 &665102325
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -6493,7 +6529,7 @@ MonoBehaviour:
   - {fileID: 8300000, guid: 39a007a82d64d7c4a8db7a9be712b726, type: 3}
   - {fileID: 8300000, guid: 2a01c9f6c55ace44fa756479ffd0762d, type: 3}
   - {fileID: 8300000, guid: e17870d9c38056c44a24cb0dd6d2ff8c, type: 3}
-  instrumentName: Clarinet
+  instrumentName: 
 --- !u!1 &755050129
 GameObject:
   m_ObjectHideFlags: 0
@@ -8126,7 +8162,7 @@ MonoBehaviour:
   - {fileID: 8300000, guid: bffeb7e6fe4be3f429d4529ecd881c96, type: 3}
   - {fileID: 8300000, guid: 998f7e0f54d96524193b9e4fe57b2d0d, type: 3}
   - {fileID: 8300000, guid: 1257a5f795e9eee40814307070f78a2f, type: 3}
-  instrumentName: Sax
+  instrumentName: 
 --- !u!1001 &963724615
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -8841,6 +8877,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 71224f0e9552e724eac51a639f77674a, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1892825782}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 71224f0e9552e724eac51a639f77674a, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1892825786}
   m_SourcePrefab: {fileID: 100100000, guid: 71224f0e9552e724eac51a639f77674a, type: 3}
 --- !u!1001 &1047600499
 PrefabInstance:
@@ -8993,6 +9032,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: a12cb50b26894e7429359057634079f0, type: 3}
       insertIndex: -1
       addedObject: {fileID: 2053350635}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: a12cb50b26894e7429359057634079f0, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 2053350639}
   m_SourcePrefab: {fileID: 100100000, guid: a12cb50b26894e7429359057634079f0, type: 3}
 --- !u!1001 &1073914820
 PrefabInstance:
@@ -9121,7 +9163,7 @@ MonoBehaviour:
   - {fileID: 8300000, guid: 433023fa58aba744d96ffda94723733f, type: 3}
   - {fileID: 8300000, guid: 4cf3bd42184b59347a73b0bf9e6c4961, type: 3}
   - {fileID: 8300000, guid: 433023fa58aba744d96ffda94723733f, type: 3}
-  instrumentName: Flute
+  instrumentName: 
 --- !u!1 &1087695766
 GameObject:
   m_ObjectHideFlags: 3
@@ -11378,18 +11420,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Navigation:
-    m_Mode: 3
+    m_Mode: 4
     m_WrapAround: 0
     m_SelectOnUp: {fileID: 0}
     m_SelectOnDown: {fileID: 0}
-    m_SelectOnLeft: {fileID: 0}
-    m_SelectOnRight: {fileID: 0}
+    m_SelectOnLeft: {fileID: 1460009044}
+    m_SelectOnRight: {fileID: 1460009044}
   m_Transition: 1
   m_Colors:
     m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
     m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
     m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
-    m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_SelectedColor: {r: 1, g: 0.3150943, b: 0.3150943, a: 1}
     m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
     m_ColorMultiplier: 1
     m_FadeDuration: 0.1
@@ -11442,7 +11484,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.754717, g: 0.081252724, b: 0.008543932, a: 0.7411765}
+  m_Color: {r: 1, g: 1, b: 1, a: 0.7411765}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -11895,18 +11937,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Navigation:
-    m_Mode: 3
+    m_Mode: 4
     m_WrapAround: 0
     m_SelectOnUp: {fileID: 0}
     m_SelectOnDown: {fileID: 0}
-    m_SelectOnLeft: {fileID: 0}
-    m_SelectOnRight: {fileID: 0}
+    m_SelectOnLeft: {fileID: 1411959783}
+    m_SelectOnRight: {fileID: 1411959783}
   m_Transition: 1
   m_Colors:
     m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
     m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
     m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
-    m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_SelectedColor: {r: 0.31290135, g: 0.96981126, b: 0.4246049, a: 1}
     m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
     m_ColorMultiplier: 1
     m_FadeDuration: 0.1
@@ -12505,7 +12547,7 @@ MonoBehaviour:
   - {fileID: 8300000, guid: 2814982bfd5774c438f9d5463893b5d1, type: 3}
   - {fileID: 8300000, guid: 005fccf464c9d61428a12dd5027de552, type: 3}
   - {fileID: 8300000, guid: dac25cacf6682ce42acf0e2b3f5e2254, type: 3}
-  instrumentName: Violin
+  instrumentName: 
 --- !u!1001 &1570674296
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -14612,6 +14654,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 471c97c456b56cb4a9627ab8662bf5c3, type: 3}
       insertIndex: -1
       addedObject: {fileID: 2014729863}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 471c97c456b56cb4a9627ab8662bf5c3, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 2014729865}
   m_SourcePrefab: {fileID: 100100000, guid: 471c97c456b56cb4a9627ab8662bf5c3, type: 3}
 --- !u!1001 &1872944920
 PrefabInstance:
@@ -14960,12 +15005,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Navigation:
-    m_Mode: 3
+    m_Mode: 4
     m_WrapAround: 0
     m_SelectOnUp: {fileID: 0}
     m_SelectOnDown: {fileID: 0}
-    m_SelectOnLeft: {fileID: 0}
-    m_SelectOnRight: {fileID: 0}
+    m_SelectOnLeft: {fileID: 2053350635}
+    m_SelectOnRight: {fileID: 1962595824}
   m_Transition: 1
   m_Colors:
     m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
@@ -14993,14 +15038,14 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 108402590}
         m_TargetAssemblyTypeName: GameManager, Assembly-CSharp
-        m_MethodName: MainToXylophoneSelect
-        m_Mode: 1
+        m_MethodName: SelectInstrument
+        m_Mode: 5
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: 
+          m_StringArgument: Xylophone
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!65 &1892825783
@@ -15024,6 +15069,20 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 0.22840008, y: 0.041947898, z: 0.021600017}
   m_Center: {x: 0.08699987, y: -0.0034262845, z: -0.00000018030195}
+--- !u!114 &1892825786
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1892825779}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 27c618e553aff5547bd7bd92b694d29b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  defaultMaterials: []
+  highlightMaterial: {fileID: 2100000, guid: 3f910e5ac9ff2df428a9a9567d0859a4, type: 2}
 --- !u!1 &1894057436
 GameObject:
   m_ObjectHideFlags: 0
@@ -15729,6 +15788,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 3b7507cb20fb8c04093a012859aaa27b, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1962595824}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 3b7507cb20fb8c04093a012859aaa27b, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1962595828}
   m_SourcePrefab: {fileID: 100100000, guid: 3b7507cb20fb8c04093a012859aaa27b, type: 3}
 --- !u!4 &1962595821 stripped
 Transform:
@@ -15748,12 +15810,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Navigation:
-    m_Mode: 3
+    m_Mode: 4
     m_WrapAround: 0
     m_SelectOnUp: {fileID: 0}
     m_SelectOnDown: {fileID: 0}
-    m_SelectOnLeft: {fileID: 0}
-    m_SelectOnRight: {fileID: 0}
+    m_SelectOnLeft: {fileID: 1892825782}
+    m_SelectOnRight: {fileID: 593402194}
   m_Transition: 1
   m_Colors:
     m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
@@ -15781,14 +15843,14 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 108402590}
         m_TargetAssemblyTypeName: GameManager, Assembly-CSharp
-        m_MethodName: MainToCelloSelect
-        m_Mode: 1
+        m_MethodName: SelectInstrument
+        m_Mode: 5
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: 
+          m_StringArgument: Cello
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!65 &1962595825
@@ -15812,6 +15874,20 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 0.036731135, y: 0.01509273, z: 0.007445468}
   m_Center: {x: 0.0030691486, y: -0.007451623, z: 0.0011603285}
+--- !u!114 &1962595828
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1131947622}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 27c618e553aff5547bd7bd92b694d29b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  defaultMaterials: []
+  highlightMaterial: {fileID: 2100000, guid: 3f910e5ac9ff2df428a9a9567d0859a4, type: 2}
 --- !u!4 &1994817437 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 803837dc8106fc147b4231929c219f58, type: 3}
@@ -15882,12 +15958,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Navigation:
-    m_Mode: 3
+    m_Mode: 4
     m_WrapAround: 0
     m_SelectOnUp: {fileID: 0}
     m_SelectOnDown: {fileID: 0}
-    m_SelectOnLeft: {fileID: 0}
-    m_SelectOnRight: {fileID: 0}
+    m_SelectOnLeft: {fileID: 593402194}
+    m_SelectOnRight: {fileID: 452157601}
   m_Transition: 1
   m_Colors:
     m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
@@ -15915,14 +15991,14 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 108402590}
         m_TargetAssemblyTypeName: GameManager, Assembly-CSharp
-        m_MethodName: MainToPianoSelect
-        m_Mode: 1
+        m_MethodName: SelectInstrument
+        m_Mode: 5
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: 
+          m_StringArgument: Piano
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!65 &2014729864
@@ -15946,6 +16022,20 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 3.512769, y: 1.4403197, z: 0.7829235}
   m_Center: {x: -0.052438848, y: -0.5680148, z: 0.10853834}
+--- !u!114 &2014729865
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 50451835}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 27c618e553aff5547bd7bd92b694d29b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  defaultMaterials: []
+  highlightMaterial: {fileID: 2100000, guid: 3f910e5ac9ff2df428a9a9567d0859a4, type: 2}
 --- !u!1001 &2028090325
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -16314,12 +16404,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Navigation:
-    m_Mode: 3
+    m_Mode: 4
     m_WrapAround: 0
     m_SelectOnUp: {fileID: 0}
     m_SelectOnDown: {fileID: 0}
-    m_SelectOnLeft: {fileID: 0}
-    m_SelectOnRight: {fileID: 0}
+    m_SelectOnLeft: {fileID: 452157601}
+    m_SelectOnRight: {fileID: 1892825782}
   m_Transition: 1
   m_Colors:
     m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
@@ -16347,14 +16437,14 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 108402590}
         m_TargetAssemblyTypeName: GameManager, Assembly-CSharp
-        m_MethodName: MainToTromboneSelect
-        m_Mode: 1
+        m_MethodName: SelectInstrument
+        m_Mode: 5
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: 
+          m_StringArgument: Trombone
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!65 &2053350636
@@ -16378,6 +16468,20 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 0.013290369, y: 0.01428838, z: 0.06442767}
   m_Center: {x: -0.000000021254909, y: -0.003781504, z: -0.00797003}
+--- !u!114 &2053350639
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2053350632}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 27c618e553aff5547bd7bd92b694d29b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  defaultMaterials: []
+  highlightMaterial: {fileID: 2100000, guid: 3f910e5ac9ff2df428a9a9567d0859a4, type: 2}
 --- !u!1001 &2054262194
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -16505,7 +16609,7 @@ MonoBehaviour:
   - {fileID: 8300000, guid: 876194b7d7de7ed47a590d947f40f977, type: 3}
   - {fileID: 8300000, guid: 3352c0cb5ea542b498364c743ca5af26, type: 3}
   - {fileID: 8300000, guid: 7368d530df723be4d94e9995fd1930da, type: 3}
-  instrumentName: Bass
+  instrumentName: 
 --- !u!1 &2066093853
 GameObject:
   m_ObjectHideFlags: 0
@@ -16841,7 +16945,7 @@ MonoBehaviour:
   - {fileID: 8300000, guid: cd5ff0f0f0bb4154aa067ec690cc5602, type: 3}
   - {fileID: 8300000, guid: fc48a9c61cbcef846a79cd3139a75b1c, type: 3}
   - {fileID: 8300000, guid: 52dff771d67f63147b981d98b793db80, type: 3}
-  instrumentName: Drum
+  instrumentName: 
 --- !u!1 &2115365827 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: a34535e93a7de774794c54d4e88a9cd8, type: 3}

@@ -17,7 +17,7 @@ public class GameController : MonoBehaviour
     private int correctInstrument;
     private int current_melody = 0;
     private int[] currentInstruments;
-    public Button replayButton;
+    public Button defaultSelect;
     private string[] melodies = {
         "Down",
         "EineKliene",
@@ -124,6 +124,6 @@ public class GameController : MonoBehaviour
     }
     public void SelectReplay()
     {
-        replayButton.Select();
+        defaultSelect.Select();
     }
 }
