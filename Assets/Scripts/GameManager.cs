@@ -1,5 +1,6 @@
 using Cinemachine;
 using JetBrains.Annotations;
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
@@ -52,6 +53,7 @@ public class GameManager : MonoBehaviour
     {
         background.SetActive(false);
         button1.SetActive(false);
+        defaultSelect.Select();
         //button2.SetActive(true);
     }
     private int GetSceneIndex(string instrument)
@@ -63,7 +65,7 @@ public class GameManager : MonoBehaviour
                 return i;
             }
         }
-        return -1;
+        throw new KeyNotFoundException("scene not added (or name is wrong)");
     }
     public void SelectInstrument(string instrument)
     {
@@ -74,6 +76,8 @@ public class GameManager : MonoBehaviour
         //get second childs text which is the play button
         confirmationPrompt.GetComponentsInChildren<TMP_Text>()[1].text = "Play the " + instrument + "!";
         confirmationPrompt.SetActive(true);
+        //Select the play button
+        confirmationPrompt.GetComponentsInChildren<Selectable>().Last().Select();
         
     }
     public void PlayInstrument()
@@ -82,6 +86,7 @@ public class GameManager : MonoBehaviour
         confirmationPrompt.SetActive(false) ;
         SwitchToCam(currentScene.gameCamera);
         gameUI.SetActive(true);
+        gameUI.GetComponentInChildren<Button>().Select();
     }
 
 
