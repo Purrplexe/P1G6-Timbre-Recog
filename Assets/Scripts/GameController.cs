@@ -10,6 +10,7 @@ using UnityEngine.UI;
 
 public class GameController : MonoBehaviour
 {
+    public MaterialChanger piano;
     public Instrument[] instruments;
     private AudioSource m_AudioSource;
     public GameObject confirmationPrompt;
@@ -117,9 +118,14 @@ public class GameController : MonoBehaviour
     {
         confirmationPrompt.SetActive(false);
         //if choice was correct
-        if (selectedInstrument == correctInstrument)
+        if (selectedInstrument == correctInstrument && piano.isBeat == false)
         {
+            piano.isBeat = true;
             Debug.Log("Confirm");
+        }
+        else
+        {
+
         }
         SelectReplay();
     }

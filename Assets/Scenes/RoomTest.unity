@@ -778,7 +778,7 @@ GameObject:
   - component: {fileID: 1879800175}
   - component: {fileID: 1879800174}
   m_Layer: 5
-  m_Name: Canvas
+  m_Name: ProgressionBar
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

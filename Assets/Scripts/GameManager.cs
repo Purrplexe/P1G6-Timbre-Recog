@@ -31,7 +31,12 @@ public class GameManager : MonoBehaviour
     public GameObject[] turnOffs;
     private Dictionary<string, int> instrumentToID = new Dictionary<string, int>();
 
-
+    public MaterialChanger guitarMatChanger;
+    public MaterialChanger pianoPart1;
+    public MaterialChanger pianoPart2;
+    public MaterialChanger pianoPart3;
+    public MaterialChanger pianoPart4;
+    public GameObject pianoComponentTurnOffs;
     public GameObject gameUI;
     public GameController gameController;
 
@@ -41,6 +46,12 @@ public class GameManager : MonoBehaviour
     private void Awake()
     {
         BindInstruments();
+        //guitarMatChanger.isBeat = true;
+        
+    }
+    public void Update()
+    {
+        LockingOfPiano();
     }
     public void BindInstruments()
     {
@@ -69,17 +80,17 @@ public class GameManager : MonoBehaviour
     }
     public void SelectInstrument(string instrument)
     {
-        instrument = instrument.ToLower();
-        currentScene = scenes[GetSceneIndex(instrument)];
-        selectedInstrument = instrument;
-        SwitchToCam(currentScene.selectCamera);
-        //get second childs text which is the play button
-        confirmationPrompt.GetComponentsInChildren<TMP_Text>()[1].text = "Play the " + instrument + "!";
-        confirmationPrompt.SetActive(true);
-        //Select the play button
-        confirmationPrompt.GetComponentsInChildren<Selectable>()
-            .Last()
-            .Select();
+            instrument = instrument.ToLower();
+            currentScene = scenes[GetSceneIndex(instrument)];
+            selectedInstrument = instrument;
+            SwitchToCam(currentScene.selectCamera);
+            //get second childs text which is the play button
+            confirmationPrompt.GetComponentsInChildren<TMP_Text>()[1].text = "Play the " + instrument + "!";
+            confirmationPrompt.SetActive(true);
+            //Select the play button
+            confirmationPrompt.GetComponentsInChildren<Selectable>()
+                .Last()
+                .Select();
         
     }
     public void PlayInstrument()
@@ -110,6 +121,25 @@ public class GameManager : MonoBehaviour
     {
         foreach (CinemachineVirtualCamera camera in Resources.FindObjectsOfTypeAll<CinemachineVirtualCamera>()) {
             camera.gameObject.SetActive(false);
+        }
+    }
+    public void LockingOfPiano()
+    {
+        if(pianoPart1.isBeat == false)
+        {
+            pianoComponentTurnOffs.GetComponent<BoxCollider>().enabled = false;
+            //pianoComponentTurnOffs.GetComponent<Button>().enabled = false;
+           
+
+        }
+        else if(pianoPart1 == true)
+        {
+            pianoComponentTurnOffs.GetComponent<BoxCollider>().enabled = true;
+            //pianoComponentTurnOffs.GetComponent<Button>().enabled = true;
+            
+            pianoPart2.isBeat = true;
+            pianoPart3.isBeat = true;
+            pianoPart4.isBeat = true;
         }
     }
 }
