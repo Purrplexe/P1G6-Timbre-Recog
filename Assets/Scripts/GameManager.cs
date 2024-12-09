@@ -19,8 +19,11 @@ public class GameManager : MonoBehaviour
     public GameObject background;
     public GameObject button1;
     public GameObject buttonReturn;
+    // int denoting how hard it is
+    public int difficultyLevel;
     public GameObject cameraMain;
     public GameObject confirmationPrompt;
+    public Difficulty[] Difficulties;
     private PlayScene currentScene;
     public Selectable defaultSelect;
     public GameObject hubCam;
@@ -29,7 +32,6 @@ public class GameManager : MonoBehaviour
     private string selectedInstrument;
     //For later
     public GameObject[] turnOffs;
-    private Dictionary<string, int> instrumentToID = new Dictionary<string, int>();
 
 
     public GameObject gameUI;
@@ -38,23 +40,32 @@ public class GameManager : MonoBehaviour
     [Header("scenes")]
     public PlayScene[] scenes;
 
-    private void Awake()
-    {
-        BindInstruments();
-    }
-    public void BindInstruments()
-    {
-        for (int i = 0; i < gameController.instruments.Length; i++)
-        {
-            instrumentToID.Add(gameController.instruments[i].name.ToLower(), i);
-        }
-    }
     public void Canner()
     {
         background.SetActive(false);
         button1.SetActive(false);
         defaultSelect.Select();
         //button2.SetActive(true);
+    }
+
+    public void SetDifficulty(Instrument instrument)
+    {
+        //find what difficulties are valid
+        List<Difficulty> validDifficulties = new List<Difficulty>();
+        foreach (Difficulty df in Difficulties)
+        {
+            // if the difficulties instrument is the instrument
+            if (df.instruments[0].ToLower() == instrument.instrumentName.ToLower())
+            {
+                //if the difficulty is less than the allowed difficulty
+                if (df.difficulty < difficultyLevel)
+                {
+                    validDifficulties.Add(df);
+                }
+            }
+        }
+        //select a random valid difficulty to play with
+        gameController.PlayWithDifficulty(validDifficulties[UnityEngine.Random.Range(0,validDifficulties.Count)]);
     }
     private int GetSceneIndex(string instrument)
     {
@@ -84,7 +95,7 @@ public class GameManager : MonoBehaviour
     }
     public void PlayInstrument()
     {
-        gameController.setCorrectInstrument(instrumentToID[selectedInstrument]);
+        gameController.setCorrectInstrument(gameController.InstrumentToID[selectedInstrument]);
         confirmationPrompt.SetActive(false) ;
         SwitchToCam(currentScene.gameCamera);
         gameUI.SetActive(true);

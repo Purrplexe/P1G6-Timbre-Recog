@@ -4,8 +4,8 @@ using UnityEngine;
 
 public class Difficulty : MonoBehaviour
 {
-    int difficulty;
-    string[] instrument;
-    bool isDifferentMelodies;
+    public int difficulty;
+    public string[] instruments;
+    public bool isDifferentMelodies;
 
 }
