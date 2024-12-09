@@ -47,18 +47,24 @@ public class GameManager : MonoBehaviour
         defaultSelect.Select();
         //button2.SetActive(true);
     }
-
-    public void SetDifficulty(Instrument instrument)
+    public void PlayWithDifficulty()
+    {
+        //run this to get camera and ui to show
+        PlayInstrument();
+        // set the difficulty scenario
+        SetDifficulty();
+    }
+    private void SetDifficulty()
     {
         //find what difficulties are valid
         List<Difficulty> validDifficulties = new List<Difficulty>();
         foreach (Difficulty df in Difficulties)
         {
             // if the difficulties instrument is the instrument
-            if (df.instruments[0].ToLower() == instrument.instrumentName.ToLower())
+            if (df.instruments[0].ToLower() == selectedInstrument)
             {
                 //if the difficulty is less than the allowed difficulty
-                if (df.difficulty < difficultyLevel)
+                if (df.difficulty <= difficultyLevel)
                 {
                     validDifficulties.Add(df);
                 }
