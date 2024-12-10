@@ -59,13 +59,13 @@ public class GameController : MonoBehaviour
             }
             else
             {
-                int randominstrument = UnityEngine.Random.Range(0, instruments.Length);
+                int randomInstrument = UnityEngine.Random.Range(0, instruments.Length);
                 // check that the selected instrument is not the correct instrument or a duplicate (by checking if the array contain)
-                while (randominstrument == correctInstrument || currentInstruments.ToList().FindAll(i => i == randominstrument).Count != 0)
+                while (randomInstrument == correctInstrument || currentInstruments.ToList().FindAll(i => i == randomInstrument).Count != 0)
                 {
-                    randominstrument = UnityEngine.Random.Range(0, instruments.Length);
+                    randomInstrument = UnityEngine.Random.Range(0, instruments.Length);
                 }
-                currentInstruments[i] = randominstrument;
+                currentInstruments[i] = randomInstrument;
             }
             
         }
@@ -82,7 +82,16 @@ public class GameController : MonoBehaviour
             // all melodies are different
             for (int i = 0; i < current_melodies.Length; i++)
             {
-                current_melodies[i] = UnityEngine.Random.Range(0, melodies.Length);
+                current_melodies[i] = -1;
+            }
+            for (int i = 0; i < current_melodies.Length; i++)
+            {
+                int randomMelody = UnityEngine.Random.Range(0, melodies.Length);
+                while (current_melodies.ToList().FindAll(m => m == randomMelody).Count != 0)
+                {
+                    randomMelody = UnityEngine.Random.Range(0, melodies.Length);
+                }
+                current_melodies[i] = randomMelody;
             }
         } else
         {

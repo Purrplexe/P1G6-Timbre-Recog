@@ -54,7 +54,7 @@ public class GameManager : MonoBehaviour
         // set the difficulty scenario
         SetDifficulty();
     }
-    private void SetDifficulty()
+    private List<Difficulty> GetValidDifficulties()
     {
         //find what difficulties are valid
         List<Difficulty> validDifficulties = new List<Difficulty>();
@@ -70,6 +70,11 @@ public class GameManager : MonoBehaviour
                 }
             }
         }
+        return validDifficulties;
+    }
+    private void SetDifficulty()
+    {
+        List<Difficulty> validDifficulties = GetValidDifficulties();
         //select a random valid difficulty to play with
         gameController.PlayWithDifficulty(validDifficulties[UnityEngine.Random.Range(0,validDifficulties.Count)]);
     }
