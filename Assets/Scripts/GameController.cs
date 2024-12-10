@@ -145,6 +145,10 @@ public class GameController : MonoBehaviour
             current_melodies[i] = UnityEngine.Random.Range(0, melodies.Length);
         }
     }
+    private void OnEnable()
+    {
+        SelectReplay();
+    }
     private void Awake()
     {
         m_AudioSource = GetComponent<AudioSource>();

@@ -102,7 +102,8 @@ public class GameManager : MonoBehaviour
         confirmationPrompt.GetComponentsInChildren<Selectable>()
             .Last()
             .Select();
-        
+        //set the slider to be the amount of valid difficulties
+        confirmationPrompt.GetComponentInChildren<Slider>().maxValue = GetValidDifficulties().Count;
     }
     public void PlayInstrument()
     {
