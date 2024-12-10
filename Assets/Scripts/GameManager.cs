@@ -27,6 +27,7 @@ public class GameManager : MonoBehaviour
     public bool transitioned = false;
     public float timerForTransition;
     private string selectedInstrument;
+    public GameObject startCam;
     //For later
     public GameObject[] turnOffs;
     private Dictionary<string, int> instrumentToID = new Dictionary<string, int>();
@@ -46,6 +47,8 @@ public class GameManager : MonoBehaviour
     private void Awake()
     {
         BindInstruments();
+        startCam.SetActive(true);
+        hubCam.SetActive(false);
         //guitarMatChanger.isBeat = true;
         
     }
@@ -65,6 +68,8 @@ public class GameManager : MonoBehaviour
         background.SetActive(false);
         button1.SetActive(false);
         defaultSelect.Select();
+        startCam.SetActive(false);
+        hubCam.SetActive(true);
         //button2.SetActive(true);
     }
     private int GetSceneIndex(string instrument)
