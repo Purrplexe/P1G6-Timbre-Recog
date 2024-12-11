@@ -1623,6 +1623,9 @@ MonoBehaviour:
   newMaterialRef: {fileID: 2100000, guid: a2db6c44b1fac8448a81c4aefb65c6de, type: 2}
   originalMaterial: {fileID: 2100000, guid: e84b6e695a6e7204999b3d438b0c2972, type: 2}
   isBeat: 0
+  guitarUnlock: 1
+  pianoUnlock: 0
+  drumsUnlock: 0
 --- !u!1 &250518843
 GameObject:
   m_ObjectHideFlags: 0
@@ -2411,6 +2414,9 @@ MonoBehaviour:
   newMaterialRef: {fileID: 2100000, guid: a2db6c44b1fac8448a81c4aefb65c6de, type: 2}
   originalMaterial: {fileID: 2100000, guid: be145f4426a12204fb4246f3671f44f1, type: 2}
   isBeat: 0
+  guitarUnlock: 1
+  pianoUnlock: 0
+  drumsUnlock: 0
 --- !u!1001 &301930479
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5569,6 +5575,9 @@ MonoBehaviour:
   newMaterialRef: {fileID: 2100000, guid: e1dadc6f1ecd37d4c9049c7d672c30fb, type: 2}
   originalMaterial: {fileID: 2100000, guid: e1dadc6f1ecd37d4c9049c7d672c30fb, type: 2}
   isBeat: 0
+  guitarUnlock: 1
+  pianoUnlock: 0
+  drumsUnlock: 0
 --- !u!114 &606072858 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 4988537322988799589, guid: 19a88bbffae7c61489f7fc2d0e13c926, type: 3}
@@ -9031,6 +9040,9 @@ MonoBehaviour:
   newMaterialRef: {fileID: 2100000, guid: a2db6c44b1fac8448a81c4aefb65c6de, type: 2}
   originalMaterial: {fileID: 2100000, guid: cbfa426474ab5a6468b98f86f31993f3, type: 2}
   isBeat: 0
+  guitarUnlock: 1
+  pianoUnlock: 0
+  drumsUnlock: 0
 --- !u!1001 &968315738
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -9601,7 +9613,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 108402590}
         m_TargetAssemblyTypeName: GameManager, Assembly-CSharp
-        m_MethodName: Canner
+        m_MethodName: StartMenuTransition
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -12598,6 +12610,9 @@ MonoBehaviour:
   newMaterialRef: {fileID: 2100000, guid: a2db6c44b1fac8448a81c4aefb65c6de, type: 2}
   originalMaterial: {fileID: 2100000, guid: 8b76263488822f2449dc4e033b2c9a28, type: 2}
   isBeat: 0
+  guitarUnlock: 1
+  pianoUnlock: 0
+  drumsUnlock: 0
 --- !u!1 &1405746038
 GameObject:
   m_ObjectHideFlags: 0

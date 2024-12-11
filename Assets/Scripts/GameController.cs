@@ -11,6 +11,7 @@ using UnityEngine.UI;
 public class GameController : MonoBehaviour
 {
     public MaterialChanger piano;
+    public GameManager manager;
     public Instrument[] instruments;
     private AudioSource m_AudioSource;
     public GameObject confirmationPrompt;
@@ -118,9 +119,13 @@ public class GameController : MonoBehaviour
     {
         confirmationPrompt.SetActive(false);
         //if choice was correct
-        if (selectedInstrument == correctInstrument && piano.isBeat == false)
+        if (selectedInstrument == correctInstrument )
         {
-            piano.isBeat = true;
+            if(manager.guitarMatChanger.guitarUnlock == true)
+            {
+                manager.pianoPart1.pianoUnlock = true;
+                Debug.Log("piano unlocked");
+            }
             Debug.Log("Confirm");
         }
         else

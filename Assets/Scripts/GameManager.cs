@@ -49,6 +49,9 @@ public class GameManager : MonoBehaviour
         BindInstruments();
         startCam.SetActive(true);
         hubCam.SetActive(false);
+        guitarMatChanger.guitarUnlock = true;
+        pianoPart1.pianoUnlock = false;
+
         //guitarMatChanger.isBeat = true;
         
     }
@@ -63,7 +66,7 @@ public class GameManager : MonoBehaviour
             instrumentToID.Add(gameController.instruments[i].name.ToLower(), i);
         }
     }
-    public void Canner()
+    public void StartMenuTransition()
     {
         background.SetActive(false);
         button1.SetActive(false);
@@ -85,6 +88,7 @@ public class GameManager : MonoBehaviour
     }
     public void SelectInstrument(string instrument)
     {
+        
             instrument = instrument.ToLower();
             currentScene = scenes[GetSceneIndex(instrument)];
             selectedInstrument = instrument;
@@ -100,11 +104,20 @@ public class GameManager : MonoBehaviour
     }
     public void PlayInstrument()
     {
-        gameController.setCorrectInstrument(instrumentToID[selectedInstrument]);
-        confirmationPrompt.SetActive(false) ;
-        SwitchToCam(currentScene.gameCamera);
-        gameUI.SetActive(true);
-        gameUI.GetComponentInChildren<Button>().Select();
+        if (guitarMatChanger.guitarUnlock == false || pianoPart1.pianoUnlock == false /*|| GetComponent<MaterialChanger>().drumsUnlock == false*/)
+        {
+            Debug.Log("Not unlocked");
+           
+            
+        }
+        else if (guitarMatChanger.guitarUnlock == true || pianoPart1.pianoUnlock == true /*|| GetComponent<MaterialChanger>().drumsUnlock == true*/)
+        {
+            gameController.setCorrectInstrument(instrumentToID[selectedInstrument]);
+            confirmationPrompt.SetActive(false);
+            SwitchToCam(currentScene.gameCamera);
+            gameUI.SetActive(true);
+            gameUI.GetComponentInChildren<Button>().Select();
+        }
     }
 
 
