@@ -635,11 +635,10 @@ MonoBehaviour:
   background: {fileID: 1673879861}
   button1: {fileID: 251834021}
   buttonReturn: {fileID: 1411959781}
-  difficultyLevel: 0
+  difficultyLevel: 100
   cameraMain: {fileID: 888422765}
   confirmationPrompt: {fileID: 1523470016}
-  Difficulties:
-  - {fileID: 863427939}
+  difficulties: []
   defaultSelect: {fileID: 593402194}
   hubCam: {fileID: 477122716}
   transitioned: 0

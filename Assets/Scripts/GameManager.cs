@@ -23,7 +23,7 @@ public class GameManager : MonoBehaviour
     public int difficultyLevel;
     public GameObject cameraMain;
     public GameObject confirmationPrompt;
-    public Difficulty[] Difficulties;
+    public Difficulty[] difficulties;
     private PlayScene currentScene;
     public Selectable defaultSelect;
     public GameObject hubCam;
@@ -40,7 +40,10 @@ public class GameManager : MonoBehaviour
 
     [Header("scenes")]
     public PlayScene[] scenes;
-
+    private void Start()
+    {
+        difficulties = Resources.FindObjectsOfTypeAll<Difficulty>();
+    }
     public void Canner()
     {
         background.SetActive(false);
@@ -59,7 +62,7 @@ public class GameManager : MonoBehaviour
     {
         //find what difficulties are valid
         List<Difficulty> validDifficulties = new List<Difficulty>();
-        foreach (Difficulty df in Difficulties)
+        foreach (Difficulty df in difficulties)
         {
             // if the difficulties instrument is the instrument
             if (df.instruments[0].ToLower() == selectedInstrument)
