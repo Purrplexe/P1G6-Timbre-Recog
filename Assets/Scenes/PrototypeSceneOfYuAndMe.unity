@@ -643,7 +643,7 @@ MonoBehaviour:
   hubCam: {fileID: 477122716}
   transitioned: 0
   timerForTransition: 0.9
-  DifficultySlider: {fileID: 0}
+  DifficultySlider: {fileID: 1525457405}
   turnOffs:
   - {fileID: 1411959781}
   - {fileID: 0}
