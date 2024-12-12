@@ -30,6 +30,7 @@ public class GameManager : MonoBehaviour
     public bool transitioned = false;
     public float timerForTransition;
     private string selectedInstrument;
+    public Slider DifficultySlider;
     //For later
     public GameObject[] turnOffs;
 
@@ -76,7 +77,7 @@ public class GameManager : MonoBehaviour
     {
         List<Difficulty> validDifficulties = GetValidDifficulties();
         //select a random valid difficulty to play with
-        gameController.PlayWithDifficulty(validDifficulties[UnityEngine.Random.Range(0,validDifficulties.Count)]);
+        gameController.PlayWithDifficulty(validDifficulties[(int)DifficultySlider.value]);
     }
     private int GetSceneIndex(string instrument)
     {
