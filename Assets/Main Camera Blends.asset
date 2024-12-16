@@ -58,6 +58,17 @@ MonoBehaviour:
         m_PostInfinity: 0
         m_RotationOrder: 0
   - m_From: HubCam
+    m_To: CongaCam
+    m_Blend:
+      m_Style: 1
+      m_Time: 1
+      m_CustomCurve:
+        serializedVersion: 2
+        m_Curve: []
+        m_PreInfinity: 0
+        m_PostInfinity: 0
+        m_RotationOrder: 0
+  - m_From: HubCam
     m_To: PianoCam
     m_Blend:
       m_Style: 1
@@ -90,118 +101,8 @@ MonoBehaviour:
         m_PreInfinity: 0
         m_PostInfinity: 0
         m_RotationOrder: 0
-  - m_From: XylophoneCam
-    m_To: HubCam
-    m_Blend:
-      m_Style: 5
-      m_Time: 1
-      m_CustomCurve:
-        serializedVersion: 2
-        m_Curve: []
-        m_PreInfinity: 0
-        m_PostInfinity: 0
-        m_RotationOrder: 0
-  - m_From: DrumsCam
-    m_To: HubCam
-    m_Blend:
-      m_Style: 5
-      m_Time: 1
-      m_CustomCurve:
-        serializedVersion: 2
-        m_Curve: []
-        m_PreInfinity: 0
-        m_PostInfinity: 0
-        m_RotationOrder: 0
-  - m_From: PianoCam
-    m_To: HubCam
-    m_Blend:
-      m_Style: 5
-      m_Time: 1
-      m_CustomCurve:
-        serializedVersion: 2
-        m_Curve: []
-        m_PreInfinity: 0
-        m_PostInfinity: 0
-        m_RotationOrder: 0
-  - m_From: CelloCam
-    m_To: HubCam
-    m_Blend:
-      m_Style: 5
-      m_Time: 1
-      m_CustomCurve:
-        serializedVersion: 2
-        m_Curve: []
-        m_PreInfinity: 0
-        m_PostInfinity: 0
-        m_RotationOrder: 0
-  - m_From: TromboneCam
-    m_To: HubCam
-    m_Blend:
-      m_Style: 5
-      m_Time: 1
-      m_CustomCurve:
-        serializedVersion: 2
-        m_Curve: []
-        m_PreInfinity: 0
-        m_PostInfinity: 0
-        m_RotationOrder: 0
   - m_From: GuitarCam
     m_To: Virtual Camera Guitar
-    m_Blend:
-      m_Style: 0
-      m_Time: 2
-      m_CustomCurve:
-        serializedVersion: 2
-        m_Curve: []
-        m_PreInfinity: 0
-        m_PostInfinity: 0
-        m_RotationOrder: 0
-  - m_From: TromboneCam
-    m_To: Virtual Camera Trombone
-    m_Blend:
-      m_Style: 0
-      m_Time: 2
-      m_CustomCurve:
-        serializedVersion: 2
-        m_Curve: []
-        m_PreInfinity: 0
-        m_PostInfinity: 0
-        m_RotationOrder: 0
-  - m_From: DrumsCam
-    m_To: Virtual Camera Drums
-    m_Blend:
-      m_Style: 0
-      m_Time: 2
-      m_CustomCurve:
-        serializedVersion: 2
-        m_Curve: []
-        m_PreInfinity: 0
-        m_PostInfinity: 0
-        m_RotationOrder: 0
-  - m_From: XylophoneCam
-    m_To: Virtual Camera Xylophone
-    m_Blend:
-      m_Style: 0
-      m_Time: 2
-      m_CustomCurve:
-        serializedVersion: 2
-        m_Curve: []
-        m_PreInfinity: 0
-        m_PostInfinity: 0
-        m_RotationOrder: 0
-  - m_From: CelloCam
-    m_To: Virtual Camera Cello
-    m_Blend:
-      m_Style: 0
-      m_Time: 2
-      m_CustomCurve:
-        serializedVersion: 2
-        m_Curve: []
-        m_PreInfinity: 0
-        m_PostInfinity: 0
-        m_RotationOrder: 0
-  - m_From: PianoCam
-    m_To: Virtual Camera Piano
     m_Blend:
       m_Style: 0
       m_Time: 2
@@ -227,72 +128,6 @@ MonoBehaviour:
     m_Blend:
       m_Style: 0
       m_Time: 2
-      m_CustomCurve:
-        serializedVersion: 2
-        m_Curve: []
-        m_PreInfinity: 0
-        m_PostInfinity: 0
-        m_RotationOrder: 0
-  - m_From: Virtual Camera Cello
-    m_To: HubCam
-    m_Blend:
-      m_Style: 0
-      m_Time: 1
-      m_CustomCurve:
-        serializedVersion: 2
-        m_Curve: []
-        m_PreInfinity: 0
-        m_PostInfinity: 0
-        m_RotationOrder: 0
-  - m_From: Virtual Camera Drums
-    m_To: HubCam
-    m_Blend:
-      m_Style: 0
-      m_Time: 2
-      m_CustomCurve:
-        serializedVersion: 2
-        m_Curve: []
-        m_PreInfinity: 0
-        m_PostInfinity: 0
-        m_RotationOrder: 0
-  - m_From: Virtual Camera Piano
-    m_To: HubCam
-    m_Blend:
-      m_Style: 0
-      m_Time: 2
-      m_CustomCurve:
-        serializedVersion: 2
-        m_Curve: []
-        m_PreInfinity: 0
-        m_PostInfinity: 0
-        m_RotationOrder: 0
-  - m_From: Virtual Camera Xylophone
-    m_To: HubCam
-    m_Blend:
-      m_Style: 0
-      m_Time: 2
-      m_CustomCurve:
-        serializedVersion: 2
-        m_Curve: []
-        m_PreInfinity: 0
-        m_PostInfinity: 0
-        m_RotationOrder: 0
-  - m_From: HubCam
-    m_To: '**ANY CAMERA**'
-    m_Blend:
-      m_Style: 0
-      m_Time: 2
-      m_CustomCurve:
-        serializedVersion: 2
-        m_Curve: []
-        m_PreInfinity: 0
-        m_PostInfinity: 0
-        m_RotationOrder: 0
-  - m_From: StartCam
-    m_To: HubCam
-    m_Blend:
-      m_Style: 2
-      m_Time: 1.5
       m_CustomCurve:
         serializedVersion: 2
         m_Curve: []
