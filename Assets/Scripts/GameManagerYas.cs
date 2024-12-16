@@ -9,7 +9,7 @@ using UnityEditor.Experimental.GraphView;
 using UnityEngine;
 using UnityEngine.UI;
 using static System.TimeZoneInfo;
-
+/*
 public class GameManager : MonoBehaviour
 {
     [Header("UI objects")]
@@ -112,7 +112,7 @@ public class GameManager : MonoBehaviour
         }*/
        // else if (guitarMatChanger.guitarUnlock == true || pianoPart1.pianoUnlock == true /*|| GetComponent<MaterialChanger>().drumsUnlock == true*/)
         //{
-            gameController.setCorrectInstrument(instrumentToID[selectedInstrument]);
+/*            gameController.setCorrectInstrument(instrumentToID[selectedInstrument]);
             confirmationPrompt.SetActive(false);
             SwitchToCam(currentScene.gameCamera);
             gameUI.SetActive(true);
@@ -160,4 +160,4 @@ public class GameManager : MonoBehaviour
             pianoPart4.isBeat = true;
         }
     }
-}
+}*/

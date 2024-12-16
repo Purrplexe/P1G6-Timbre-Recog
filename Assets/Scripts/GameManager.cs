@@ -34,6 +34,7 @@ public class GameManager : MonoBehaviour
     //For later
     public GameObject[] turnOffs;
 
+    public GameObject startCam;
 
     public GameObject gameUI;
     public GameController gameController;
@@ -43,12 +44,16 @@ public class GameManager : MonoBehaviour
     private void Start()
     {
         difficulties = Resources.FindObjectsOfTypeAll<Difficulty>();
+        startCam.SetActive(true);
+        hubCam.SetActive(false);
     }
-    public void Canner()
+    public void StartMenuTransition()
     {
         background.SetActive(false);
         button1.SetActive(false);
         defaultSelect.Select();
+        startCam.SetActive(false);
+        hubCam.SetActive(true);
         //button2.SetActive(true);
     }
     public void PlayWithDifficulty()
