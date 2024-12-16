@@ -19,46 +19,30 @@ public class GameManager : MonoBehaviour
     public GameObject background;
     public GameObject button1;
     public GameObject buttonReturn;
+    // int denoting how hard it is
+    public int difficultyLevel;
     public GameObject cameraMain;
     public GameObject confirmationPrompt;
+    public Difficulty[] difficulties;
     private PlayScene currentScene;
     public Selectable defaultSelect;
     public GameObject hubCam;
     public bool transitioned = false;
     public float timerForTransition;
     private string selectedInstrument;
+    public Slider DifficultySlider;
     //For later
     public GameObject[] turnOffs;
-    private Dictionary<string, int> instrumentToID = new Dictionary<string, int>();
 
-    public MaterialChanger guitarMatChanger;
-    public MaterialChanger pianoPart1;
-    public MaterialChanger pianoPart2;
-    public MaterialChanger pianoPart3;
-    public MaterialChanger pianoPart4;
-    public GameObject pianoComponentTurnOffs;
+
     public GameObject gameUI;
     public GameController gameController;
 
     [Header("scenes")]
     public PlayScene[] scenes;
-
-    private void Awake()
+    private void Start()
     {
-        BindInstruments();
-        //guitarMatChanger.isBeat = true;
-        
-    }
-    public void Update()
-    {
-        LockingOfPiano();
-    }
-    public void BindInstruments()
-    {
-        for (int i = 0; i < gameController.instruments.Length; i++)
-        {
-            instrumentToID.Add(gameController.instruments[i].name.ToLower(), i);
-        }
+        difficulties = Resources.FindObjectsOfTypeAll<Difficulty>();
     }
     public void Canner()
     {
@@ -66,6 +50,37 @@ public class GameManager : MonoBehaviour
         button1.SetActive(false);
         defaultSelect.Select();
         //button2.SetActive(true);
+    }
+    public void PlayWithDifficulty()
+    {
+        //run this to get camera and ui to show
+        PlayInstrument();
+        // set the difficulty scenario
+        SetDifficulty();
+    }
+    private List<Difficulty> GetValidDifficulties()
+    {
+        //find what difficulties are valid
+        List<Difficulty> validDifficulties = new List<Difficulty>();
+        foreach (Difficulty df in difficulties)
+        {
+            // if the difficulties instrument is the instrument
+            if (df.instruments[0].ToLower() == selectedInstrument)
+            {
+                //if the difficulty is less than the allowed difficulty
+                if (df.difficulty <= difficultyLevel)
+                {
+                    validDifficulties.Add(df);
+                }
+            }
+        }
+        return validDifficulties;
+    }
+    private void SetDifficulty()
+    {
+        List<Difficulty> validDifficulties = GetValidDifficulties();
+        //select a random valid difficulty to play with
+        gameController.PlayWithDifficulty(validDifficulties[(int)DifficultySlider.value]);
     }
     private int GetSceneIndex(string instrument)
     {
@@ -80,22 +95,23 @@ public class GameManager : MonoBehaviour
     }
     public void SelectInstrument(string instrument)
     {
-            instrument = instrument.ToLower();
-            currentScene = scenes[GetSceneIndex(instrument)];
-            selectedInstrument = instrument;
-            SwitchToCam(currentScene.selectCamera);
-            //get second childs text which is the play button
-            confirmationPrompt.GetComponentsInChildren<TMP_Text>()[1].text = "Play the " + instrument + "!";
-            confirmationPrompt.SetActive(true);
-            //Select the play button
-            confirmationPrompt.GetComponentsInChildren<Selectable>()
-                .Last()
-                .Select();
-        
+        instrument = instrument.ToLower();
+        currentScene = scenes[GetSceneIndex(instrument)];
+        selectedInstrument = instrument;
+        SwitchToCam(currentScene.selectCamera);
+        //get second childs text which is the play button
+        confirmationPrompt.GetComponentsInChildren<TMP_Text>()[1].text = "Play the " + instrument + "!";
+        confirmationPrompt.SetActive(true);
+        //Select the play button
+        confirmationPrompt.GetComponentsInChildren<Selectable>()
+            .Last()
+            .Select();
+        //set the slider to be the amount of valid difficulties
+        confirmationPrompt.GetComponentInChildren<Slider>().maxValue = GetValidDifficulties().Count - 1;
     }
     public void PlayInstrument()
     {
-        gameController.setCorrectInstrument(instrumentToID[selectedInstrument]);
+        gameController.setCorrectInstrument(gameController.InstrumentToID[selectedInstrument]);
         confirmationPrompt.SetActive(false) ;
         SwitchToCam(currentScene.gameCamera);
         gameUI.SetActive(true);
@@ -121,25 +137,6 @@ public class GameManager : MonoBehaviour
     {
         foreach (CinemachineVirtualCamera camera in Resources.FindObjectsOfTypeAll<CinemachineVirtualCamera>()) {
             camera.gameObject.SetActive(false);
-        }
-    }
-    public void LockingOfPiano()
-    {
-        if(pianoPart1.isBeat == false)
-        {
-            pianoComponentTurnOffs.GetComponent<BoxCollider>().enabled = false;
-            //pianoComponentTurnOffs.GetComponent<Button>().enabled = false;
-           
-
-        }
-        else if(pianoPart1 == true)
-        {
-            pianoComponentTurnOffs.GetComponent<BoxCollider>().enabled = true;
-            //pianoComponentTurnOffs.GetComponent<Button>().enabled = true;
-            
-            pianoPart2.isBeat = true;
-            pianoPart3.isBeat = true;
-            pianoPart4.isBeat = true;
         }
     }
 }

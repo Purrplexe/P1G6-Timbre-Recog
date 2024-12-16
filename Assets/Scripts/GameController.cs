@@ -1,4 +1,5 @@
 using JetBrains.Annotations;
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
@@ -10,15 +11,15 @@ using UnityEngine.UI;
 
 public class GameController : MonoBehaviour
 {
-    public MaterialChanger piano;
     public Instrument[] instruments;
     private AudioSource m_AudioSource;
     public GameObject confirmationPrompt;
     public int selectedInstrument;
     private int correctInstrument;
-    private int current_melody = 0;
+    private int[] current_melodies = { 0, 0, 0, 0 };
     private int[] currentInstruments;
     public Button defaultSelect;
+    public Dictionary<string, int> InstrumentToID { get; private set; } = new Dictionary<string, int>();
     private string[] melodies = {
         "Down",
         "EineKliene",
@@ -29,17 +30,27 @@ public class GameController : MonoBehaviour
         "Sonata No 16",
         "Up"
     };
-    public void PlayAudio(Instrument instrument)
+    public void PlayAudio(Instrument instrument, int melodyID)
     {
-        m_AudioSource.clip = instrument.audioClips[current_melody];
+        m_AudioSource.clip = instrument.audioClips[melodyID];
         m_AudioSource.Play();
     }
-    public void setInstrument(int instrumentID)
+    private void BindInstruments()
     {
-        correctInstrument = instrumentID;
+        for (int i = 0; i < instruments.Length; i++)
+        {
+            InstrumentToID.Add(instruments[i].name.ToLower(), i);
+        }
+    }
+    private void Start()
+    {
+        //set up the dictionary so we can get the id of it from name
+        BindInstruments();
+        // should be the actual instrument
+        correctInstrument = UnityEngine.Random.Range(0, instruments.Length);
         // set the current instruments such that it contains the correct instrument and 3 other random ones that are unique
         currentInstruments = new int[] { -1, -1, -1, -1 };
-        int correctIndex = Random.Range(0, 3);
+        int correctIndex = UnityEngine.Random.Range(0, 3);
         for (int i = 0; i < 4; i++)
         {
             if (i == correctIndex)
@@ -48,24 +59,58 @@ public class GameController : MonoBehaviour
             }
             else
             {
-                int randominstrument = Random.Range(0, instruments.Length);
+                int randomInstrument = UnityEngine.Random.Range(0, instruments.Length);
                 // check that the selected instrument is not the correct instrument or a duplicate (by checking if the array contain)
-                while (randominstrument == correctInstrument || currentInstruments.ToList().FindAll(i => i == randominstrument).Count != 0)
+                while (randomInstrument == correctInstrument || currentInstruments.ToList().FindAll(i => i == randomInstrument).Count != 0)
                 {
-                    randominstrument = Random.Range(0, instruments.Length);
+                    randomInstrument = UnityEngine.Random.Range(0, instruments.Length);
                 }
-                currentInstruments[i] = randominstrument;
+                currentInstruments[i] = randomInstrument;
             }
-
+            
         }
-
-        current_melody = Random.Range(0, melodies.Length);
+        //defaults to random melodies
+        for (int i = 0; i < current_melodies.Length; i++)
+        {
+            current_melodies[i] = UnityEngine.Random.Range(0, melodies.Length);
+        }
     }
-    private void Start()
-    {
-        setInstrument(Random.Range(0, instruments.Length));
 
-        // should be the actual instrument
+    public void PlayWithDifficulty(Difficulty difficulty)
+    {
+        if (difficulty.isDifferentMelodies) {
+            // all melodies are different
+            for (int i = 0; i < current_melodies.Length; i++)
+            {
+                current_melodies[i] = -1;
+            }
+            for (int i = 0; i < current_melodies.Length; i++)
+            {
+                int randomMelody = UnityEngine.Random.Range(0, melodies.Length);
+                while (current_melodies.ToList().FindAll(m => m == randomMelody).Count != 0)
+                {
+                    randomMelody = UnityEngine.Random.Range(0, melodies.Length);
+                }
+                current_melodies[i] = randomMelody;
+            }
+        } else
+        {
+            // all melodies are same
+            int sameMelody = UnityEngine.Random.Range(0, melodies.Length);
+            for (int i = 0; i < current_melodies.Length; i++)
+            {
+                current_melodies[i] = sameMelody;
+            }
+        }
+        List<string> DiffInstruments = difficulty.instruments.ToList<string>();
+        //set instruments
+        for (int i = 0; i < currentInstruments.Length; i++) {
+            //sets each instrument to a random instrument in the list
+            int randomID = UnityEngine.Random.Range(0, DiffInstruments.Count);
+            currentInstruments[i] = InstrumentToID[DiffInstruments[randomID].ToLower()];
+            // remove it from the list
+            DiffInstruments.Remove(DiffInstruments[randomID]);
+        }
 
     }
 
@@ -74,7 +119,7 @@ public class GameController : MonoBehaviour
         correctInstrument = instrumentID;
         // set the current instruments such that it contains the correct instrument and 3 other random ones that are unique
         currentInstruments = new int[] { -1, -1, -1, -1 };
-        int correctIndex = Random.Range(0, 3);
+        int correctIndex = UnityEngine.Random.Range(0, 3);
         for (int i = 0; i < 4; i++)
         {
             if (i == correctIndex)
@@ -83,18 +128,26 @@ public class GameController : MonoBehaviour
             }
             else
             {
-                int randominstrument = Random.Range(0, instruments.Length);
+                int randominstrument = UnityEngine.Random.Range(0, instruments.Length);
                 // check that the selected instrument is not the correct instrument or a duplicate (by checking if the array contain)
                 while (randominstrument == correctInstrument || currentInstruments.ToList().FindAll(i => i == randominstrument).Count != 0)
                 {
-                    randominstrument = Random.Range(0, instruments.Length);
+                    randominstrument = UnityEngine.Random.Range(0, instruments.Length);
                 }
                 currentInstruments[i] = randominstrument;
             }
 
         }
 
-        current_melody = Random.Range(0, melodies.Length);
+        //defaults to random melodies
+        for (int i = 0; i < current_melodies.Length; i++)
+        {
+            current_melodies[i] = UnityEngine.Random.Range(0, melodies.Length);
+        }
+    }
+    private void OnEnable()
+    {
+        SelectReplay();
     }
     private void Awake()
     {
@@ -103,13 +156,13 @@ public class GameController : MonoBehaviour
 
     public void Replay()
     {
-        PlayAudio(instruments[correctInstrument]);
+        PlayAudio(instruments[correctInstrument], current_melodies[correctInstrument]);
     }
     public void ButtonClicked(int id)
     {
         selectedInstrument = currentInstruments[id];
         // play corresponding instrument
-        PlayAudio(instruments[currentInstruments[id]]);
+        PlayAudio(instruments[currentInstruments[id]], current_melodies[id]);
         // open prompt to confirm choice
         confirmationPrompt.SetActive(true);
         confirmationPrompt.GetComponentInChildren<Button>().Select();
@@ -118,14 +171,9 @@ public class GameController : MonoBehaviour
     {
         confirmationPrompt.SetActive(false);
         //if choice was correct
-        if (selectedInstrument == correctInstrument && piano.isBeat == false)
+        if (selectedInstrument == correctInstrument)
         {
-            piano.isBeat = true;
             Debug.Log("Confirm");
-        }
-        else
-        {
-
         }
         SelectReplay();
     }
