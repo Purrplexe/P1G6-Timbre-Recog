@@ -40,7 +40,7 @@ public class GameManager : MonoBehaviour
     public GameObject pianoComponentTurnOffs;
     public GameObject gameUI;
     public GameController gameController;
-
+    //lego//
     [Header("scenes")]
     public PlayScene[] scenes;
 
