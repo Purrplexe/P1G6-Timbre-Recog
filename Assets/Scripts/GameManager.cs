@@ -37,7 +37,7 @@ public class GameManager : MonoBehaviour
 
     public GameObject gameUI;
     public GameController gameController;
-
+    //lego//
     [Header("scenes")]
     public PlayScene[] scenes;
     private void Start()
