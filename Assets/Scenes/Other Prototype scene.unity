@@ -135,6 +135,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 249273429}
     - target: {fileID: 787848880782188515, guid: 8f8497fa3d99a8b42bd2b78b8b668b21, type: 3}
+      propertyPath: manager
+      value: 
+      objectReference: {fileID: 108402590}
+    - target: {fileID: 787848880782188515, guid: 8f8497fa3d99a8b42bd2b78b8b668b21, type: 3}
       propertyPath: replayButton
       value: 
       objectReference: {fileID: 972958505}
@@ -484,7 +488,7 @@ MonoBehaviour:
   - {fileID: 8300000, guid: 36cf3b19db61c8f478c4f8beeacbf50d, type: 3}
   - {fileID: 8300000, guid: 7dbef135373ee3a4098364f7a1e06c0c, type: 3}
   - {fileID: 8300000, guid: 77e04d127b5225b4bbe29b28c5e43f49, type: 3}
-  instrumentName: 
+  instrumentName: Trumpet
 --- !u!1 &50451835 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 471c97c456b56cb4a9627ab8662bf5c3, type: 3}
@@ -1097,7 +1101,7 @@ MonoBehaviour:
   - {fileID: 8300000, guid: 20ca9a46d880a2a4f84b3eb3cc31f8a3, type: 3}
   - {fileID: 8300000, guid: 5f09e8df90e77e84eb0f0f31ed3acd47, type: 3}
   - {fileID: 8300000, guid: 795ed3030e140e14886b304368b6239f, type: 3}
-  instrumentName: 
+  instrumentName: Cello
 --- !u!1 &184240002 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: a34535e93a7de774794c54d4e88a9cd8, type: 3}
@@ -1611,7 +1615,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 249273425}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 06141210814ef554a9adfd14006fffbe, type: 3}
   m_Name: 
@@ -1818,7 +1822,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 108402590}
         m_TargetAssemblyTypeName: GameManager, Assembly-CSharp
-        m_MethodName: Canner
+        m_MethodName: StartMenuTransition
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -2220,7 +2224,7 @@ MonoBehaviour:
   - {fileID: 8300000, guid: d0a9991c7352b8746aff00ca28c532d9, type: 3}
   - {fileID: 8300000, guid: f17b0bab1a44796418756f2b6f94baab, type: 3}
   - {fileID: 8300000, guid: 0c7e94f070df91e41a16338fde1c18ab, type: 3}
-  instrumentName: 
+  instrumentName: Trombone
 --- !u!4 &269882286 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 12a79b3f7bafff441a421f4efc9e6145, type: 3}
@@ -2386,7 +2390,7 @@ MonoBehaviour:
   - {fileID: 8300000, guid: 39f37681f57111148ad6cf3397601a3e, type: 3}
   - {fileID: 8300000, guid: 9ec130bf9285eec41ae3a2fac53aebd3, type: 3}
   - {fileID: 8300000, guid: d20ee1e5a7afd744aa24b818606ee425, type: 3}
-  instrumentName: 
+  instrumentName: Guitar
 --- !u!1 &301890292 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: -9205347951241810782, guid: 471c97c456b56cb4a9627ab8662bf5c3, type: 3}
@@ -2399,7 +2403,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 301890292}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 06141210814ef554a9adfd14006fffbe, type: 3}
   m_Name: 
@@ -4943,7 +4947,7 @@ MonoBehaviour:
   - {fileID: 8300000, guid: b958a3ec556dfb54c9ec715d3ed55270, type: 3}
   - {fileID: 8300000, guid: d795e2f679a337a469282f489c49d0c7, type: 3}
   - {fileID: 8300000, guid: 800facd668ebc4d45ade9a4521b36f0c, type: 3}
-  instrumentName: 
+  instrumentName: Piano
 --- !u!114 &540730814 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 100311212497454112, guid: 19a88bbffae7c61489f7fc2d0e13c926, type: 3}
@@ -4993,7 +4997,7 @@ MonoBehaviour:
   - {fileID: 8300000, guid: 96a74aaa5001d914b92fd15603fa884e, type: 3}
   - {fileID: 8300000, guid: 84f62d4042e94f14c925385404bd6a9a, type: 3}
   - {fileID: 8300000, guid: 30269a103e729cc47b02d4ef0d92c542, type: 3}
-  instrumentName: 
+  instrumentName: Xylophone
 --- !u!4 &556106842
 Transform:
   m_ObjectHideFlags: 0
@@ -5768,7 +5772,7 @@ MonoBehaviour:
   - {fileID: 8300000, guid: 3378e2c3f836b5e4a80acc4f4f10e23e, type: 3}
   - {fileID: 8300000, guid: 66b323b5ed3a4db42bfd13c0816ad952, type: 3}
   - {fileID: 8300000, guid: 6a02714df58fd3c4fbb11858b82363f3, type: 3}
-  instrumentName: 
+  instrumentName: Viola
 --- !u!1001 &665102325
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -7130,7 +7134,7 @@ MonoBehaviour:
   - {fileID: 8300000, guid: 39a007a82d64d7c4a8db7a9be712b726, type: 3}
   - {fileID: 8300000, guid: 2a01c9f6c55ace44fa756479ffd0762d, type: 3}
   - {fileID: 8300000, guid: e17870d9c38056c44a24cb0dd6d2ff8c, type: 3}
-  instrumentName: 
+  instrumentName: Clarinet
 --- !u!1 &755050129
 GameObject:
   m_ObjectHideFlags: 0
@@ -7183,7 +7187,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 682847e200a2779448b54a94ddcd58b6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  controller: {fileID: 0}
+  controller: {fileID: 1659050850}
 --- !u!114 &755050132
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8848,7 +8852,7 @@ MonoBehaviour:
   - {fileID: 8300000, guid: bffeb7e6fe4be3f429d4529ecd881c96, type: 3}
   - {fileID: 8300000, guid: 998f7e0f54d96524193b9e4fe57b2d0d, type: 3}
   - {fileID: 8300000, guid: 1257a5f795e9eee40814307070f78a2f, type: 3}
-  instrumentName: 
+  instrumentName: Sax
 --- !u!1 &960037618
 GameObject:
   m_ObjectHideFlags: 0
@@ -9019,7 +9023,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 968224153}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 06141210814ef554a9adfd14006fffbe, type: 3}
   m_Name: 
@@ -9311,7 +9315,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 943672b82ebf15146901a4d1ea6b8371, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  controller: {fileID: 0}
+  controller: {fileID: 1659050850}
   buttonID: 2
 --- !u!114 &996938951
 MonoBehaviour:
@@ -10320,7 +10324,7 @@ MonoBehaviour:
   - {fileID: 8300000, guid: 433023fa58aba744d96ffda94723733f, type: 3}
   - {fileID: 8300000, guid: 4cf3bd42184b59347a73b0bf9e6c4961, type: 3}
   - {fileID: 8300000, guid: 433023fa58aba744d96ffda94723733f, type: 3}
-  instrumentName: 
+  instrumentName: Flute
 --- !u!1 &1087695766
 GameObject:
   m_ObjectHideFlags: 3
@@ -11367,7 +11371,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 943672b82ebf15146901a4d1ea6b8371, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  controller: {fileID: 0}
+  controller: {fileID: 1659050850}
   buttonID: 1
 --- !u!114 &1207856588
 MonoBehaviour:
@@ -12213,7 +12217,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 858ca9cf4b584404a92ed019c98b1a4c, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 126
+      value: 134
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 858ca9cf4b584404a92ed019c98b1a4c, type: 3}
       propertyPath: m_LocalPosition.y
@@ -12221,7 +12225,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 858ca9cf4b584404a92ed019c98b1a4c, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 308
+      value: 308.00122
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 858ca9cf4b584404a92ed019c98b1a4c, type: 3}
       propertyPath: m_LocalRotation.w
@@ -12586,7 +12590,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1400957907}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 06141210814ef554a9adfd14006fffbe, type: 3}
   m_Name: 
@@ -13511,7 +13515,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 943672b82ebf15146901a4d1ea6b8371, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  controller: {fileID: 0}
+  controller: {fileID: 1659050850}
   buttonID: 3
 --- !u!114 &1483904838
 MonoBehaviour:
@@ -13883,7 +13887,7 @@ MonoBehaviour:
   - {fileID: 8300000, guid: 2814982bfd5774c438f9d5463893b5d1, type: 3}
   - {fileID: 8300000, guid: 005fccf464c9d61428a12dd5027de552, type: 3}
   - {fileID: 8300000, guid: dac25cacf6682ce42acf0e2b3f5e2254, type: 3}
-  instrumentName: 
+  instrumentName: Violin
 --- !u!1 &1547016592
 GameObject:
   m_ObjectHideFlags: 0
@@ -15475,7 +15479,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 108402590}
         m_TargetAssemblyTypeName: GameManager, Assembly-CSharp
-        m_MethodName: Canner
+        m_MethodName: StartMenuTransition
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -16937,7 +16941,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 943672b82ebf15146901a4d1ea6b8371, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  controller: {fileID: 0}
+  controller: {fileID: 1659050850}
   buttonID: 0
 --- !u!114 &1925828257
 MonoBehaviour:
@@ -17248,7 +17252,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Texture: {fileID: 2800000, guid: b955ad9c968238d40a24698d26d3f3e6, type: 3}
+  m_Texture: {fileID: 2800000, guid: 67ee7457865e4284398c901711e28535, type: 3}
   m_UVRect:
     serializedVersion: 2
     x: 0
@@ -18398,7 +18402,7 @@ MonoBehaviour:
   - {fileID: 8300000, guid: 876194b7d7de7ed47a590d947f40f977, type: 3}
   - {fileID: 8300000, guid: 3352c0cb5ea542b498364c743ca5af26, type: 3}
   - {fileID: 8300000, guid: 7368d530df723be4d94e9995fd1930da, type: 3}
-  instrumentName: 
+  instrumentName: Bass
 --- !u!1 &2066093853
 GameObject:
   m_ObjectHideFlags: 0
@@ -18809,7 +18813,7 @@ MonoBehaviour:
   - {fileID: 8300000, guid: cd5ff0f0f0bb4154aa067ec690cc5602, type: 3}
   - {fileID: 8300000, guid: fc48a9c61cbcef846a79cd3139a75b1c, type: 3}
   - {fileID: 8300000, guid: 52dff771d67f63147b981d98b793db80, type: 3}
-  instrumentName: 
+  instrumentName: Drum
 --- !u!1 &2115365827 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: a34535e93a7de774794c54d4e88a9cd8, type: 3}
