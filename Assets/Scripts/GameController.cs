@@ -15,6 +15,7 @@ public class GameController : MonoBehaviour
     public GameObject confirmationPrompt;
     public int selectedInstrument;
     private int correctInstrument;
+    private int correctInstrumentIndex;
     private int[] current_melodies = { 0, 0, 0, 0 };
     private int[] currentInstruments;
     public Button defaultSelect;
@@ -49,10 +50,10 @@ public class GameController : MonoBehaviour
         correctInstrument = UnityEngine.Random.Range(0, instruments.Length);
         // set the current instruments such that it contains the correct instrument and 3 other random ones that are unique
         currentInstruments = new int[] { -1, -1, -1, -1 };
-        int correctIndex = UnityEngine.Random.Range(0, 3);
+        correctInstrumentIndex = UnityEngine.Random.Range(0, 3);
         for (int i = 0; i < 4; i++)
         {
-            if (i == correctIndex)
+            if (i == correctInstrumentIndex)
             {
                 currentInstruments[i] = correctInstrument;
             }
@@ -107,6 +108,9 @@ public class GameController : MonoBehaviour
             //sets each instrument to a random instrument in the list
             int randomID = UnityEngine.Random.Range(0, DiffInstruments.Count);
             currentInstruments[i] = InstrumentToID[DiffInstruments[randomID].ToLower()];
+            if (randomID == 0) {
+                correctInstrumentIndex = i;
+            }
             // remove it from the list
             DiffInstruments.Remove(DiffInstruments[randomID]);
         }
@@ -118,10 +122,10 @@ public class GameController : MonoBehaviour
         correctInstrument = instrumentID;
         // set the current instruments such that it contains the correct instrument and 3 other random ones that are unique
         currentInstruments = new int[] { -1, -1, -1, -1 };
-        int correctIndex = UnityEngine.Random.Range(0, 3);
+        correctInstrumentIndex = UnityEngine.Random.Range(0, 3);
         for (int i = 0; i < 4; i++)
         {
-            if (i == correctIndex)
+            if (i == correctInstrumentIndex)
             {
                 currentInstruments[i] = correctInstrument;
             }
@@ -155,7 +159,7 @@ public class GameController : MonoBehaviour
 
     public void Replay()
     {
-        PlayAudio(instruments[correctInstrument], current_melodies[correctInstrument]);
+        PlayAudio(instruments[correctInstrument], current_melodies[correctInstrumentIndex]);
     }
     public void ButtonClicked(int id)
     {
