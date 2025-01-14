@@ -22,6 +22,7 @@ public class GameManager : MonoBehaviour
     public int difficultyLevel;
     public GameObject cameraMain;
     public GameObject confirmationPrompt;
+    public GameObject difficultySlider;
     public Difficulty[] difficulties;
     private PlayScene currentScene;
     public GameObject playWithDifficultyButton;
@@ -105,21 +106,23 @@ public class GameManager : MonoBehaviour
         selectedInstrument = instrument;
         SwitchToCam(currentScene.selectCamera);
         //get second childs text which is the play button
-        confirmationPrompt.GetComponentsInChildren<TMP_Text>()[1].text = "Play the " + instrument + "!";
+        difficultySlider.SetActive(true);
+        playWithDifficultyButton.SetActive(true);
+        confirmationPrompt.GetComponentsInChildren<TMP_Text>()[0].text = "Play the " + instrument + "!";
         confirmationPrompt.SetActive(true);
         //Select the play button
         confirmationPrompt.GetComponentsInChildren<Selectable>()
-            .Last()
+            .First()
             .Select();
         //set the slider to be the amount of valid difficulties
         confirmationPrompt.GetComponentInChildren<Slider>().maxValue = GetValidDifficulties().Count - 1;
         if (GetValidDifficulties().Count - 1 < 0)
         {
-            confirmationPrompt.GetComponentInChildren<Slider>().gameObject.SetActive(false);
+            difficultySlider.SetActive(false);
             playWithDifficultyButton.SetActive(false);
         } else
         {
-            confirmationPrompt.GetComponentInChildren<Slider>().gameObject.SetActive(true);
+            difficultySlider.SetActive(true);
             playWithDifficultyButton.SetActive(true);
         }
     }

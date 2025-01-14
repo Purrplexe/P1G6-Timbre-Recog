@@ -643,8 +643,8 @@ RectTransform:
   m_LocalScale: {x: 0.9999895, y: 0.9999895, z: 0.9999895}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 348722707}
   - {fileID: 1036515567}
+  - {fileID: 348722707}
   - {fileID: 266394674}
   - {fileID: 266720383}
   m_Father: {fileID: 404509568}
@@ -689,6 +689,7 @@ MonoBehaviour:
   difficultyLevel: 99999
   cameraMain: {fileID: 888422765}
   confirmationPrompt: {fileID: 95466226}
+  difficultySlider: {fileID: 266720382}
   difficulties:
   - {fileID: 1519630344}
   - {fileID: 571961742}
@@ -12663,7 +12664,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 76c392e42b5098c458856cdf6ecaaaa1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_FirstSelected: {fileID: 1925828254}
+  m_FirstSelected: {fileID: 1002174216}
   m_sendNavigationEvents: 1
   m_DragThreshold: 10
 --- !u!4 &1208863706
