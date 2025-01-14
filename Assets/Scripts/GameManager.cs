@@ -24,6 +24,7 @@ public class GameManager : MonoBehaviour
     public GameObject confirmationPrompt;
     public Difficulty[] difficulties;
     private PlayScene currentScene;
+    public GameObject playWithDifficultyButton;
     public Selectable defaultSelect;
     public GameObject hubCam;
     public bool transitioned = false;
@@ -112,6 +113,15 @@ public class GameManager : MonoBehaviour
             .Select();
         //set the slider to be the amount of valid difficulties
         confirmationPrompt.GetComponentInChildren<Slider>().maxValue = GetValidDifficulties().Count - 1;
+        if (GetValidDifficulties().Count - 1 < 0)
+        {
+            confirmationPrompt.GetComponentInChildren<Slider>().gameObject.SetActive(false);
+            playWithDifficultyButton.SetActive(false);
+        } else
+        {
+            confirmationPrompt.GetComponentInChildren<Slider>().gameObject.SetActive(true);
+            playWithDifficultyButton.SetActive(true);
+        }
     }
     public void PlayInstrument()
     {
